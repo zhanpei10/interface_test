@@ -1,0 +1,19 @@
+# 法律法规更新
+-
+  url: /law/update
+  headers:
+    accessToken:
+  data:
+    behaviorName:
+    classification:
+    createTime:
+    creator: 100625
+    id:
+    isPudongUM: 1
+    lawId:
+    library:
+    regulations:
+    status: 1
+    terms:
+    updateTime:
+    updator: 100625

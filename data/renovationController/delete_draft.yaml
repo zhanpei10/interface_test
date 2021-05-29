@@ -1,0 +1,8 @@
+# 删除专项整治草稿接口测试
+-
+  url: /renovation/delete
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 删除草稿接口测试结束

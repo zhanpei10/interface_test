@@ -1,0 +1,39 @@
+# 新建草稿
+-
+  url: /renovation/create
+  headers:
+    accessToken:
+  data:
+    aim: "这是专项整治的目的"
+    attendOrganId: "1"
+    content: "<p>这是草稿的正文</p>"
+    coverUrl: "/skyline/img/special-rectification-template-2.131adc78.png"
+    endTimestamp:
+    leadOrganId: "1"
+    renovationAnnexReqList:
+    renovationCategory: 4236
+    renovationLevel: 1
+    renovationType: 2
+    startTimestamp:
+    status: -1
+    title: 删除的草稿
+  context: 新建专项整治草稿1结束
+-
+  url: /renovation/create
+  headers:
+    accessToken:
+  data:
+    aim: "这是专项整治的目的"
+    attendOrganId: "1"
+    content: "<p>这是草稿的正文</p>"
+    coverUrl: "/skyline/img/special-rectification-template-2.131adc78.png"
+    endTimestamp:
+    leadOrganId: "1"
+    renovationAnnexReqList:
+    renovationCategory: 4236
+    renovationLevel: 1
+    renovationType: 2
+    startTimestamp:
+    status: -1
+    title:
+  context: 新建专项整治草稿2结束

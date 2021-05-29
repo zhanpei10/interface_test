@@ -1,0 +1,7 @@
+# 获取事件类型树接口测试 get
+-
+  url: /event-category/tree
+  headers:
+    accessToken:
+  data:
+    excludeEmptyNodes: false

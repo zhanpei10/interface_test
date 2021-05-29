@@ -1,0 +1,8 @@
+# 查看草稿箱详情
+-
+  url: /renovation/detail
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 查询草稿详情接口测试结束

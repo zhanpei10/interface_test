@@ -1,0 +1,15 @@
+# 查看渣土车的轨迹详情
+-
+  url: /truck/track
+  headers:
+    accessToken:
+  data:
+    vehicleNum: 沪A11111
+
+-
+  url: /truck/day/track
+  headers:
+    accessToken:
+  data:
+    vehicleNum: 沪FD3372
+    date: 2021-06-03

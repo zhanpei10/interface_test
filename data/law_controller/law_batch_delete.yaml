@@ -1,0 +1,7 @@
+# 法律法规删除
+-
+  url: /law/batch/delete
+  headers:
+    accessToken:
+  data:
+    lawIds:

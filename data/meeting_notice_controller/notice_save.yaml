@@ -1,0 +1,98 @@
+# 将会议通知保存为草稿接口测试
+
+-
+  url: /meeting/notice/save
+  headers:
+    accessToken:
+  data:
+    address: 这是第一个草稿
+    endTime:
+    startTime:
+    subject:
+    userIds:
+    annexs:
+  context: 现建一个草稿箱接口测试
+
+-
+  url: /meeting/notice/save
+  headers:
+    accessToken:
+  data:
+    address: 这是第二个草稿
+    endTime:
+    startTime:
+    subject:
+    userIds:
+    annexs:
+  context: 现建第二个草稿箱接口测试
+
+
+#-
+#  url: /meeting/notice/save
+#  headers:
+#    accessToken:
+#  data:
+#    address: 这是草稿箱地址大大大这是草稿箱地址大萨达大萨达
+#    endTime:
+#    startTime:
+#    subject: 这是草稿箱主题
+#    userIds:
+#    annexs:
+#  context: 返回地址超长保存为草稿 正常流程测试
+
+#-
+#  url: /meeting/notice/save
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大萨达大萨达大神
+#    endTime:
+#    startTime:
+#    subject:
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回地址超长保存为草稿 正常流程测试

@@ -1,0 +1,30 @@
+# 更新车辆
+-
+  url: /vehicle/update
+  headers:
+    accessToken:
+  data:
+    annualReviewTime:
+    backUrls:
+    brand: "这是修改之后的品牌"
+    buyDate:
+    color:
+    driveLicenseExpireDate:
+    driveLicenseNo: "这是行驶证编号"
+    driveUrls:
+    frontUrls:
+    id:
+    identification: 3
+    leftUrls:
+    licensePlateNumber:
+    orgId:
+    orgName:
+    personNum: 4
+    powerType:
+    rightUrls:
+    transportCerfificateExpireDate:
+    transportCerfificateNo: "这是运输证编号"
+    usageStatus: 1
+    vehicleNo: "1234"
+    vehicleType: 1
+  context: 修改车辆的接口测试

@@ -1,0 +1,6 @@
+# 获取事件分类详情
+-
+  url: /event-category/
+  headers:
+    accessToken:
+

@@ -1,0 +1,8 @@
+# 删除车辆
+-
+  url: /vehicle/delete
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 删除车辆接口测试完成

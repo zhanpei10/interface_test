@@ -42,7 +42,7 @@ class InterfaceKey:
         return requests.put(url=path, data=data, json=json, **kwargs)
 
     # delete请求
-    def do_delete(self, path, data=None, json=None, **kwargs):
+    def do_delete(self, path, params=None, **kwargs):
         '''
 
         :param path:
@@ -51,7 +51,14 @@ class InterfaceKey:
         :param kwargs:
         :return:
         '''
-        return requests.delete(url=path, params=None, **kwargs)
+        return requests.delete(url=path, params=params, **kwargs)
 
-
-
+    def do_import_file(self, path, data=None, files=None, **kwargs):
+        '''
+            导入文件请求
+        :param path:
+        :param data:
+        :param files:
+        :return:
+        '''
+        return requests.post(url=path, data=data, files=files, **kwargs)

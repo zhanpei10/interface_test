@@ -1,0 +1,17 @@
+# 修改员工的禁用或者启用状态
+-
+  url: /user/updateStatus
+  headers:
+    accessToken:
+  data:
+    id:
+    status: 2
+
+-
+  url: /user/updateStatus
+  headers:
+    accessToken:
+  data:
+    id: 
+    status: 1
+

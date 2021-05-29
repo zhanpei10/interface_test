@@ -1,0 +1,22 @@
+# 搜抓拍
+-
+  url: /truck/search/capture
+  headers:
+    accessToken:
+  data:
+    cameraSerial:
+      - "4l86d7b3u874"
+    endTime:
+    eventType:
+      - "3070"
+      - "3021"
+      - "3022"
+      - "3023"
+      - "3033"
+      - "3034"
+      - "3035"
+      - "100000019"
+      - "9333"
+      - "321332"
+      - "3213123"
+    startTime:

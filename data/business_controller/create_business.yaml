@@ -1,0 +1,16 @@
+-
+  url: "/business"
+  headers:
+    accessToken:
+  data:
+    address: "上海市浦东新区洋浩路"
+    businessType: 3
+    images:
+    latitude: "30.899488561108253"
+    license: 0
+    longitude: "121.85002068697287"
+    name:
+    responsiblePerson:
+    telephone: "18328816524"
+    riskLevel: 0
+  context: 新建商户接口测试

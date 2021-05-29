@@ -1,0 +1,13 @@
+# 车辆统计相关
+-
+  url: /truck/dashboard
+  headers:
+    accessToken:
+  data:
+    type: 48
+-
+  url: /truck/dashboard
+  headers:
+    accessToken:
+  data:
+    type: 2

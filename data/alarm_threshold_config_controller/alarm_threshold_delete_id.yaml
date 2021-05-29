@@ -1,0 +1,6 @@
+# 通过id删除告警阀值
+-
+  url: /alarm-threshold/delete/
+  headers:
+    accessToken:
+

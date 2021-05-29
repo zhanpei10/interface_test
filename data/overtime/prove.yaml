@@ -1,0 +1,10 @@
+# 加班申请流程
+-
+  url: /overtime/prove/
+  headers:
+    accessToken:
+  data:
+    comment: 加班审批通过
+    nodeType: approveTrue
+    taskId: "127811"
+  context: 加班审批接口测试

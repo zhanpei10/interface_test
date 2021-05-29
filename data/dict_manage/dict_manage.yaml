@@ -1,0 +1,8 @@
+-
+  url: /dict-manage
+  headers:
+    accessToken:
+  data:
+    enabled: true
+    moduleName:
+    moduleType:

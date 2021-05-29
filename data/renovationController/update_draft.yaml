@@ -1,0 +1,7 @@
+# 提交草稿箱的内容
+-
+  url: /renovation/update
+  headers:
+    accessToken:
+  data:
+  context: 提交草稿箱接口测试结束

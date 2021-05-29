@@ -1,0 +1,8 @@
+# 查询意见反馈列表
+-
+  url: /feedback/list
+  headers:
+    accessToken:
+  data:
+    page: 1
+    pageSize: 30

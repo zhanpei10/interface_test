@@ -1,0 +1,6 @@
+# 回填点详情查询
+-
+  url: /refill/HT20201123001
+  headers:
+    accessToken:
+

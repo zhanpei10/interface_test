@@ -1,0 +1,8 @@
+-
+  url: "/dict-manage/sub-list"
+  headers:
+    accessToken:
+  data:
+    page: 1
+    pageSize: 30
+    parentId:

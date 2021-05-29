@@ -1,0 +1,51 @@
+# 获取单兵装备列表
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus:
+    equipmentCategory: 1
+    equipmentStatus:
+    equipmentType: "3" # 根据设备类型查询单兵装备
+    mainTabIndex: 1
+    page: 1
+    pageSize: 20
+  context: 根据设备类型调用单兵装备查询接口测试完成
+
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus:
+    equipmentCategory: 1
+    mainTabIndex: 1
+    page: 1
+    pageSize: 20
+    useStatus: "1" # 根据使用情况查询
+  context: 根据使用情况调用单兵装备查询接口测试完成
+
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: "0" # 根据连接状态查询
+    equipmentCategory: 1
+    mainTabIndex: 1
+    page: 1
+    pageSize: 20
+  context: 根据连接状态调用单兵装备查询接口测试完成
+
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    equipmentCategory: 1
+    keywords: "auto"  # 根据搜索关键字查询
+    mainTabIndex: 1
+    page: 1
+    pageSize: 20
+  context: 根据关键字调用单兵装备查询接口测试完成

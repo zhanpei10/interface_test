@@ -1,0 +1,55 @@
+# 新建车辆
+# 获取部门id
+-
+  url: /org/orgs
+  headers:
+    accessToken:
+  data:
+    rootType: 2
+    pagination: 0
+    searchAll: true
+  context: 根据部门接口获得部门id
+
+-
+  url: /dict-manage/sub-list/POWER_TYPE
+  headers:
+    accessToken:
+  context: 获取车辆动力类型
+-
+  url: /dict-manage/sub-list/VEHICLE_COLOR
+  headers:
+    accessToken:
+  context: 获取车辆的颜色
+-
+  url: /vehicle/picture/upload
+  headers:
+    accessToken:
+  context:  上传车辆图片
+
+-
+  url: /vehicle/create
+  headers:
+    accessToken:
+  data:
+    annualReviewTime:
+    backUrls:
+    brand: "这是车辆品牌"
+    buyDate:
+    color:
+    driveLicenseExpireDate:
+    driveLicenseNo: "这是行驶证编号"
+    driveUrls:
+    frontUrls:
+    identification: 3
+    leftUrls:
+    licensePlateNumber:
+    orgId:
+    orgName: ""
+    personNum: "4"
+    powerType:
+    rightUrls:
+    transportCerfificateExpireDate:
+    transportCerfificateNo: "这是运输证编号"
+    usageStatus: 1
+    vehicleNo: "1234"
+    vehicleType: 1

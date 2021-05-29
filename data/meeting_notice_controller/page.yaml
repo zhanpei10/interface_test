@@ -1,0 +1,26 @@
+# 分页查询接口
+-
+  url: /meeting/notice/page
+  headers:
+    accessToken:
+  data:
+    endTime:
+    page: 1
+    pageSize: 30
+    publishUserId:
+    startTime:
+    status: 1
+  context: 草稿箱分页查询接口测试
+
+-
+  url: /meeting/notice/page
+  headers:
+    accessToken:
+  data:
+    endTime:
+    page: 1
+    pageSize: 30
+    publishUserId:
+    startTime:
+    status: 2
+  context: 已发送分页查询接口测试

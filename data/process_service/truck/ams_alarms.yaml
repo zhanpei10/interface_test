@@ -1,0 +1,5 @@
+# 查看告警图片
+-
+  url: /ams/alarms/
+  headers:
+    accessToken:

@@ -1,0 +1,8 @@
+# 取消会议通知
+-
+  url: /meeting/notice/cancel
+  headers:
+    accessToken:
+  data:
+    id: 135
+  context: 取消会议通知接口测试

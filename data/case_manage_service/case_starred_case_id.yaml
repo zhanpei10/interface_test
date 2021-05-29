@@ -1,0 +1,5 @@
+# 添加事件关注接口测试  put
+-
+  url: /case/starred/
+  headers:
+    accessToken:

@@ -1,0 +1,10 @@
+# 查询用户列表
+-
+  url: /user/users
+  headers:
+    accessToken:
+  data:
+    keywords:
+    num: 30
+    page: 1
+    type: 1

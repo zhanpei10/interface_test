@@ -1,0 +1,8 @@
+# 删除草稿箱接口测试
+-
+  url: /meeting/notice/delete
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 删除会议通知草稿箱接口测试

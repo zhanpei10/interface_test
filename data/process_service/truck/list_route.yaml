@@ -1,0 +1,7 @@
+# 查看路线
+-
+  url: /truck/list/route
+  headers:
+    accessToken:
+  data:
+    truckNum: 沪FD3372

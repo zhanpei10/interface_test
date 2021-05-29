@@ -1,0 +1,56 @@
+# 获取渣土车抓拍列表
+-
+  url: /truck/list/capture
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    cameraSerials:
+    orderBy: "capture_time"
+    page: 1
+    pageSize: 30
+
+-
+  url: /truck/list/capture
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    cameraSerials:
+    endTime: "2021-06-03T03:01:08.571Z"
+    orderBy: "capture_time"
+    page: 1
+    pageSize: 30
+    startTime: "2021-05-28T03:01:08.571Z"
+
+-
+  url: /truck/list/capture
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    cameraSerials:
+      - "3v0uftvn06ir"
+      - "3v0uftvi0dts"
+      - "3v0uftvn06iy"
+      - "3v0uftvrzz7m"
+      - "43d87vwo2gw0"
+    endTime: "2021-06-03T03:01:08.571Z"
+    orderBy: "capture_time"
+    page: 1
+    pageSize: 30
+    startTime: "2021-05-28T03:01:08.571Z"
+
+-
+  url: /truck/list/capture
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    cameraSerials:
+    endTime: "2021-06-03T03:22:18.744Z"
+    orderBy: "capture_time"
+    page: 1
+    pageSize: 30
+    startTime: "2021-05-28T03:22:18.743Z"
+    truckNum: "FD3372"

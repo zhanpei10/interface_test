@@ -1,0 +1,46 @@
+# 渣土车管控  运输车辆
+# /truck/hasLicense
+
+-
+  url: /truck/list
+  headers:
+    accessToken:
+  data:
+    pageSize: 30
+    page: 1
+    ascOrDesc: DESC
+    orderBy: id
+
+-
+  url: /truck/list
+  headers:
+    accessToken:
+  data:
+    pageSize: 30
+    page: 1
+    ascOrDesc: DESC
+    orderBy: id
+    status: 2
+
+-
+  url: /truck/list
+  headers:
+    accessToken:
+  data:
+    pageSize: 30
+    page: 1
+    ascOrDesc: DESC
+    orderBy: id
+    minCase:
+    maxCase:
+
+-
+  url: /truck/list
+  headers:
+    accessToken:
+  data:
+    pageSize: 30
+    page: 1
+    ascOrDesc: DESC
+    orderBy: id
+    keywords: 沪A11111

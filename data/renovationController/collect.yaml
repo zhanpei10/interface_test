@@ -1,0 +1,18 @@
+# 收藏或者取消收藏专项整治接口测试
+-
+  url: /renovation/collect
+  headers:
+    accessToken:
+  data:
+    collectStatus: 1
+    renovationId:
+  context: 收藏收藏专项整治接口测试结束
+
+-
+  url: /renovation/collect
+  headers:
+    accessToken:
+  data:
+    collectStatus: 0
+    renovationId:
+  context: 收藏收藏专项整治接口测试结束

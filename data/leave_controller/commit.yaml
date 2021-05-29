@@ -1,0 +1,11 @@
+# 提交审核
+-
+  url: /leave/commit
+  headers:
+    accessToken:
+  data:
+    comment: 这是审核意见
+    id: 230  # 请假id
+    nodeType: approveTrue  # 节点类型
+    taskId:
+  context: 提交审核

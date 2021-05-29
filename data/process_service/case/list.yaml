@@ -1,0 +1,249 @@
+# 渣土车违法事件列表
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseTypes:
+      - "3070"
+      - "3021"
+      - "3022"
+      - "3023"
+      - "3033"
+      - "3034"
+      - "3035"
+      - "100000019"
+      - "9333"
+      - "321332"
+      - "3213123"
+    page: 1
+    pageSize: 10
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3070"
+      - "3021"
+      - "3022"
+      - "3023"
+      - "3033"
+      - "3034"
+      - "3035"
+      - "100000019"
+      - "9333"
+      - "321332"
+      - "3213123"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+      - 4
+    workTimeLimit: 0
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3022"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+    workTimeLimit: 0
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3023"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    page: 1
+    pageSize: 30
+    phases:
+      - "6"
+    scene: 1
+    sources:
+    workTimeLimit: 0
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3023"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    page: 1
+    pageSize: 30
+    phases:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+    scene: 1
+    sources:
+    statuses:
+      - "7"
+    workTimeLimit: 0
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3021"
+    discovery: "-1"
+    endTime: 1622688070506
+    eventRefreshTimeOrder: "DESC"
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+    startTime: 1621478470506
+    workTimeLimit: 0
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3021"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    keywords: "202106022110170000324240"
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+    workTimeLimit: 0
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3070"
+      - "3021"
+      - "3022"
+      - "3023"
+      - "3033"
+      - "3034"
+      - "3035"
+      - "100000019"
+      - "9333"
+      - "321332"
+      - "3213123"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    keywords: ""
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+    workTimeLimit: 1
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3070"
+      - "3021"
+      - "3022"
+      - "3023"
+      - "3033"
+      - "3034"
+      - "3035"
+      - "100000019"
+      - "9333"
+      - "321332"
+      - "3213123"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    keywords: ""
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+    workTimeLimit: 2
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+      - "3070"
+      - "3021"
+      - "3022"
+      - "3023"
+      - "3033"
+      - "3034"
+      - "3035"
+      - "100000019"
+      - "9333"
+      - "321332"
+      - "3213123"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    keywords: ""
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+    workTimeLimit: 3
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 1
+    caseTypes:
+      - "3070"
+      - "3021"
+      - "3022"
+      - "3023"
+      - "3033"
+      - "3034"
+      - "3035"
+      - "100000019"
+      - "9333"
+      - "321332"
+      - "3213123"
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    keywords: ""
+    page: 1
+    pageSize: 30
+    scene: 1
+    sources:
+    workTimeLimit: 3

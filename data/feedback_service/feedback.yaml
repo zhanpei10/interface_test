@@ -1,0 +1,11 @@
+# 添加意见反馈
+-
+  url: /feedback
+  headers:
+    accessToken:
+  data:
+    content: "这是测试新建的反馈意见，请忽略"
+    questionType: 3
+    reportTime:
+    telephone: "18327652656"
+    urls: "http://10.111.32.82:18181/g1/M00/00/35/CvQARWC19jiAdUccAAFO2RRVzqA764.png"

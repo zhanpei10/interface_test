@@ -1,0 +1,266 @@
+# 现建会议通知并推送
+
+
+-
+  url: /user/users
+  headers:
+    accessToken:
+  data:
+    pagination: 0
+    status: 1
+  context: 获取用户id
+
+-
+  url: /meeting/notice/annex/upload
+  headers:
+    accessToken:
+  context: 调用上传附件接口
+
+-
+  url: /meeting/notice/create/publish
+  headers:
+    accessToken:
+  data:
+    address: 这是会议的地址
+    endTime:
+    startTime:
+    subject:
+    userIds:
+    annexs:
+  context: 返回ok 正常流程测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 这是会议的地址
+#    endTime:
+#    startTime:
+#    subject: 这是会议主题7
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回ok 正常流程测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken: 2313321dsadsad
+#  data:
+#    address: 这是会议的地址
+#    endTime:
+#    startTime:
+#    subject: 这是会议主题7
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回错误验证吗40005,错误token测试结束
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address:
+#    endTime:
+#    startTime:
+#    subject: 这是会议主题7
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回address 会议地址不能为空，会议地址为空测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大大
+#    endTime:
+#    startTime:
+#    subject: 这是会议主题7
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回address 会议地址最多输入20个字符，会议地址超过20位测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject: 这是会议主题8
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回ok,会议地址等于20位测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject:
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: subject 会议主题不能为空 会议主题为空测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject: 额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且完全
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: subject 会议主题最多输入100个字符 会议主题大于测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject: 额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回ok 会议主题等于100测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject: 额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回用户信息不能为空测试 会议主题等于测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject: ewqeqewewq
+#    userIds: [3123213213123]
+#    annexs:
+#  context: 返回ok 收件人不存在时测试
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject: ewqeqewewq
+#    userIds:
+#    annexs:
+#  context: 返回ok 附件为空测试
+
+#-
+#  url: /meeting/notice/create/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 大大大的萨达萨达大大大大大大萨达大大大大
+#    endTime:
+#    startTime:
+#    subject: 额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且额外企鹅请问请问而且
+#    userIds:
+#    annexs:
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#      -
+#        annexName: 'test'
+#        annexUrl: http://10.111.32.82:10219/components/fdfs/g1/M00/00/47/CvQAg2Dr9DOAK7IKAClYlioHtzY777.png
+#        fileType: 3
+#  context: 返回用户信息不能为空测试 附件大于10条测试  pass
+

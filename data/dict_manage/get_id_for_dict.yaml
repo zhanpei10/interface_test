@@ -1,0 +1,9 @@
+# 获取字典主项的id
+-
+  url: "/dict-manage/list"
+  headers:
+    accessToken:
+  data:
+    keyword:
+    page: 1
+    pageSize: 10

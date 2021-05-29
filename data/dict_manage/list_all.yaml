@@ -1,0 +1,4 @@
+-
+  url: "/dict-manage/list/all"
+  headers:
+    accessToken:

@@ -1,0 +1,6 @@
+# 抓拍按天统计当月
+-
+  url: /truck/capture/day/count
+  headers:
+    accessToken:
+

@@ -1,0 +1,18 @@
+#  新增部门接口
+-
+  url: /org/orgs?rootType=0
+  headers:
+    accessToken:
+  data:
+    extra:
+      address: #部门地址
+      area:  #占地面积
+      concat: "18328876256"
+      divisionCode: "120101001"
+      divisionCodeLabel: "12,1201,120101,120101001"
+      divisionLevel: 3
+      orgType: "BusinessOrg"
+    organName:    #部门名称
+    parentOrgId: 0
+    remark:   # 备注
+    rootType: 0

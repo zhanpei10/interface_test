@@ -1,0 +1,5 @@
+# 移除事件关注 delete
+-
+  url: /case/unstarred/
+  headers:
+    accessToken:

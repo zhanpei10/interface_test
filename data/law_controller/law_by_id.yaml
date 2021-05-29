@@ -1,0 +1,5 @@
+# 根据id查询法律法规详情  get
+-
+  url: /law/
+  headers:
+    accessToken:

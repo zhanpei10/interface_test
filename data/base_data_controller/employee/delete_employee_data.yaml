@@ -1,0 +1,8 @@
+# 删除用户 伪删除
+-
+  url: /user/updateStatus
+  headers:
+    accessToken:
+  data:
+    id:
+    status: 3

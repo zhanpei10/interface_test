@@ -1,0 +1,9 @@
+# 查看车辆详情
+-
+  url: /vehicle/detail
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 获取车辆详情接口测试结束
+

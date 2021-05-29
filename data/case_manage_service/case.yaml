@@ -1,0 +1,30 @@
+ #事件上报接口
+-
+  url: "/case"
+  headers:
+    accessToken:
+  data:
+    address: "上海市浦东新区X368(三三公路)"
+    alarmSubject: "临港奉贤园区F12路（D1路-G7路、D3路-园区北界）市政道路及配套工程"
+    alarmSubjectId: 20
+    appealedPerson: "科比"
+    caseType: 100000014
+    checkWay: 0
+    gridSerial: "6c40d0db8e1b42ed964d4fdfaa4e2b5d"
+    images:
+      - "https://10.9.242.39:10220/components/fdfs/g1/M00/00/00/CvQABmDiuBSAP8jpAAvTffVHNmU708.png"
+    latitude: 30.960675802229414
+    level: 2
+    longitude: 121.9065749885845
+    problemDesc: "这是问题描述"
+    processClosedTime:
+    reportTime:
+    serial:
+    source: 3
+    suspectUsers:
+    taskNumber:
+    transferDispatchTime:
+    videos:
+      - "http://10.111.32.82:18181/g1/M00/00/33/CvQARWCnokOAFrikAAklsayWSyU387.MP4"
+
+

@@ -1,0 +1,21 @@
+-
+  url: /camera-group/search/resources
+  headers:
+    accessToken:
+  data:
+    accessFilter: false
+    accessedOnly: false
+    availableOnly: false
+    onceConnected: false
+    resourceTypeIds:
+    serviceTypes:
+    taskId:
+  context: 获取视频源信息
+-
+  url: /business/relevancy
+  headers:
+    accessToken:
+  data:
+    businessSerial:
+    resourceSerials:
+  context: 商户关联视频源接口测试结束

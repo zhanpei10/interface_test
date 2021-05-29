@@ -1,0 +1,41 @@
+
+
+# 更新发布会议通知
+# 会议地址为空测试
+-
+  url: /meeting/notice/update/publish
+  headers:
+    accessToken:
+  data:
+    address: 大打算大时代撒大声地
+    endTime:
+    startTime:
+    subject: 这是修改后的的进行取消会议直达eqweqeqe31233234324
+    userIds:
+      - 222
+      - 100711
+    annexs:
+    noticeType: 3
+    id:  148
+  context: 更新草稿发布会议通知接口测试
+
+## 更新发布会议通知
+#-
+#  url: /meeting/notice/update/publish
+#  headers:
+#    accessToken:
+#  data:
+#    address: 这是会议的地址
+#    endTime:
+#    startTime:
+#    subject: 这是修改之后的会议主题
+#    userIds:
+#      - 100712
+#      - 100711
+#      - 222
+#    annexs:
+#    noticeType: 3
+#    id: 102
+#  context: 更新发布会议通知接口测试  fail
+
+

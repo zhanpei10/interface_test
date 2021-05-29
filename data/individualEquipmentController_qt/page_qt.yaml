@@ -1,0 +1,48 @@
+# 获取其他装备列表
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    equipmentCategory: 2
+    equipmentType: "10001"
+    mainTabIndex: 2
+    page: 1
+    pageSize: 20
+  context: 查询便携性打印机其他装备接口测试结束
+
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    equipmentCategory: 2
+    equipmentType: "10002"
+    mainTabIndex: 2
+    page: 1
+    pageSize: 20
+  context: 查询采集工作站其他装备接口测试结束
+
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    equipmentCategory: 2
+    equipmentType: "10003"
+    mainTabIndex: 2
+    page: 1
+    pageSize: 20
+  context: 查询其他单兵装备接口测试结束
+
+-
+  url: /individualEquipment/page
+  headers:
+    accessToken:
+  data:
+    equipmentCategory: 2
+    keywords: "autoTest"
+    mainTabIndex: 2
+    page: 1
+    pageSize: 20
+  context: 查询其他单兵装备接口测试结束

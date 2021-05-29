@@ -1,0 +1,7 @@
+# 渣土车档案详情
+-
+  url: /truck/detail
+  headers:
+    accessToken:
+  data:
+    vehicleNum: 沪A11111

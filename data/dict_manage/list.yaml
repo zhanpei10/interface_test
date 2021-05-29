@@ -1,0 +1,29 @@
+# 按分页进行查询
+-
+  url: "/dict-manage/list"
+  headers:
+    accessToken:
+  data:
+    page: 1
+    pageSize: 10
+#  按大类名称进行查询
+-
+  url: "/dict-manage/list"
+  headers:
+    accessToken:
+  data:
+    moduleNames:
+      - "指挥中心大屏配置"
+    page: 1
+    pageSize: 10
+# 按开启状态进行查询
+-
+  url: "/dict-manage/list"
+  headers:
+    accessToken:
+  data:
+    enabled: true
+    page: 1
+    pageSize: 10
+# 按关键字和开启状态进行查询
+

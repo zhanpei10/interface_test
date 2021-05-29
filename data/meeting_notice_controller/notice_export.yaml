@@ -1,0 +1,12 @@
+# 导出会议通知
+-
+  url: /meeting/notice/export
+  headers:
+    accessToken:
+  data:
+   end: 1
+   endTime:
+   publishUserId: 42
+   start: 10
+   startTime:
+  context: 导出会议通知接口测试

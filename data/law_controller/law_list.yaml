@@ -1,0 +1,9 @@
+# 查询法律法规接口列表
+-
+  url: /law/list
+  headers:
+    accessToken:
+  data:
+    keywords:
+    page: 1
+    pageSize: 30

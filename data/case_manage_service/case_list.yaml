@@ -1,0 +1,18 @@
+# 案件列表接口测试
+# 按关键字进行搜索
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    keywords:
+    page: 1
+    pageSize: 30
+    processStatus: "1"
+    scene: 0
+    sources:
+    workTimeLimit: 0
+

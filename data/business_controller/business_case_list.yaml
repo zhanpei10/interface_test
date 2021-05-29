@@ -1,0 +1,211 @@
+# 商户违法事件列表查询
+-
+  url: /event-category/list
+  headers:
+    accessToken:
+  data:
+    sceneType: 3
+  context: 获取商户相关的事件类型
+
+-
+  url: /grid/tree
+  headers:
+    accessToken:
+  data:
+    allSub: true
+    defaultGrid: 0
+    gridSerial: "0"
+  context: 获取网格父节点信息
+
+-
+  url: /grid/tree
+  headers:
+    accessToken:
+  data:
+    allSub: true
+    defaultGrid: 0
+    gridSerial:
+  context: 获取网格列表
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: "-1"
+    eventRefreshTimeOrder: "DESC"
+    page: 1
+    pageSize: 30
+    scene: 3
+    sources:
+    workTimeLimit: 0
+  context: 获取默认违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    eventRefreshTimeOrder: "DESC"
+    keywords:
+    page: 1
+    pageSize: 30
+    scene: 3
+    sources:
+      - 1
+    workTimeLimit: 0
+  context: 获取事件来源为AIOT违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    eventRefreshTimeOrder: "DESC"
+    keywords: ""
+    page: 1
+    pageSize: 30
+    phases:
+      - 6
+    scene: 3
+    sources:
+    workTimeLimit: 0
+  context: 获取事件阶段为归档的违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    eventRefreshTimeOrder: "DESC"
+    keywords: ""
+    page: 1
+    pageSize: 30
+    phases:
+    scene: 3
+    sources:
+    statuses:
+      - 1
+    workTimeLimit: 0
+  context: 获取事件状态为已上报的违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    endTime: 1626423126320
+    eventRefreshTimeOrder: "DESC"
+    keywords:
+    page: 1
+    pageSize: 30
+    phases:
+    scene: 3
+    sources:
+    startTime: 1625068800000
+    statuses:
+    workTimeLimit: 0
+  context: 根据事发时间查询违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    eventRefreshTimeOrder: "DESC"
+    gridSerials:
+    keywords:
+    page: 1
+    pageSize: 30
+    phases:
+    scene: 3
+    sources:
+    statuses:
+    workTimeLimit: 0
+  context: 根据网格查询违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    cameras:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    eventRefreshTimeOrder: "DESC"
+    gridSerials:
+    keywords:
+    page: 1
+    pageSize: 30
+    phases:
+    scene: 3
+    sources:
+    statuses:
+    workTimeLimit: 0
+  context: 根据事发地点（视频源）查询违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    cameras:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    eventRefreshEndTime: 1626424067829
+    eventRefreshStartTime: 1625905667829
+    eventRefreshTimeOrder: "DESC"
+    gridSerials:
+    keywords: ""
+    page: 1
+    pageSize: 30
+    phases:
+    scene: 3
+    sources:
+    statuses:
+    workTimeLimit: 0
+  context: 根据更新时间查询违法事件列表接口测试结束
+
+-
+  url: /case/list
+  headers:
+    accessToken:
+  data:
+    cameras:
+    caseProcessExists: 0
+    caseTypes:
+    discovery: -1
+    eventRefreshTimeOrder: "DESC"
+    gridSerials:
+    keywords: "20210"
+    page: 1
+    pageSize: 30
+    phases:
+    scene: 3
+    sources:
+    statuses:
+    workTimeLimit: 0
+  context: 根据关键字查询违法事件列表接口测试结束
+
+
+
+

@@ -1,0 +1,21 @@
+-
+  url: /basedata/create-vehicle
+  headers:
+    accessToken:
+  data:
+    backUrls: "http://10.111.32.82:18181/g1/M00/00/31/CvQARWCkfTGAXS0jAABZdM_gf70814.png"
+    brand: "313213123"
+    buyDate: "2021-05-19"
+    driveUrls: "http://10.111.32.82:18181/g1/M00/00/31/CvQARWCkfTqAdcRoAABZdM_gf70471.png"
+    frontUrls: "http://10.111.32.82:18181/g1/M00/00/31/CvQARWCkfS2AZjphAABZdM_gf70431.png"
+    idNumber: "3213313"
+    indicateType: "本市旧标识"
+    leftUrls: "http://10.111.32.82:18181/g1/M00/00/31/CvQARWCkfTOAGErFAABZdM_gf70361.png"
+    number: "eqeewqe"
+    org: "3"
+    personNum: "0312"
+    powerType: "柴油车"
+    rightUrls: "http://10.111.32.82:18181/g1/M00/00/31/CvQARWCkfTeAH5BtAABZdM_gf70546.png"
+    status: 1
+    type: "箱式货车"
+    verifyDate: "2021-05-20"

@@ -1,0 +1,30 @@
+# 修改用户
+-
+  url: /user/update
+  headers:
+    accessToken:
+  data:
+    allowLocation: 1
+    armyStatus: ""
+    background: "共青团员"
+    cellphone: "18328826524"
+    drivingLicence: ""
+    edBackground: "大学专科"
+    employeeDescription: "3213123"
+    employeeTitle: "二级高级主办"
+    gender: 0
+    gridSerial: ""
+    haveDrivingLicence: 0
+    haveSecurityLicence: 0
+    height: ""
+    hireDate: ""
+    id:
+    imageUrl: ""
+    isExSoldier: 0
+    name:
+    nation: "汉族"
+    orgId: 3
+    remark: "312313"
+    roleIds: "5"
+    type: 1
+    userId:

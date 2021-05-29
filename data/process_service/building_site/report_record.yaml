@@ -1,0 +1,8 @@
+# 申报记录
+-
+  url: /building-site/report-record
+  headers:
+    accessToken:
+  data:
+    history: false
+    serial:

@@ -1,0 +1,7 @@
+# 获取装备平台列表
+-
+  url: /platform-service/platform/list
+  headers:
+    accessToken:
+  data:
+    serial:

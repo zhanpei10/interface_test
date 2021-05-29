@@ -1,0 +1,5 @@
+# 查看用户自定义应用列表
+-
+  url: "/custom/modules/of/loginuser"
+  headers:
+    accessToken:

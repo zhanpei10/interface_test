@@ -1,0 +1,7 @@
+-
+  url: "/dict-manage/enable/count"
+  headers:
+    accessToken:
+  data:
+    page: 1
+    pageSize: 30

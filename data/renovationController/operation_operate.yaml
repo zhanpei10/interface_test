@@ -1,0 +1,72 @@
+# 专项整治流转
+-
+  url: /user/users
+  headers:
+    accessToken:
+  data:
+    pagination: 0
+    status: 1
+-
+  url: /renovation/operation/operate
+  headers:
+    accessToken:
+  data:
+    ccPersons:
+    operateType: 20
+    opinion: "这是测试的专项整治方案已下发，请及时查阅!"
+    renovationId:
+    senders:
+    status: 2
+  context: 专项整治任务下发流转接口测试结束
+
+-
+  url: /renovation/operation/operate
+  headers:
+    accessToken:
+  data:
+    ccPersons:
+    operateType: 30
+    opinion: "这是测试的专项整治已进入宣传教育阶段，请向广大市民、企业进行广泛宣传，通过告知教育，督促自行整改，提高市民、企业对执法工作的理解和支持"
+    renovationId:
+    senders:
+    status: 3
+  context: 专项整治宣传教育流转接口测试结束
+
+-
+  url: /renovation/operation/operate
+  headers:
+    accessToken:
+  data:
+    ccPersons:
+    operateType: 40
+    opinion: "这是测试的专项整治已进入集中整治阶段，请根据相关计划开展整治工作，并按时完成汇报"
+    renovationId:
+    senders:
+    status: 4
+  context: 专项整治集中整治流转接口测试结束
+
+-
+  url: /renovation/operation/operate
+  headers:
+    accessToken:
+  data:
+    ccPersons:
+    operateType: 50
+    opinion: "这是测试的专项整治已进入检查验收阶段，领导小组在进行全面验收评比并排名公示"
+    renovationId:
+    senders:
+    status: 5
+  context: 专项整治检查验收流转接口测试结束
+
+-
+  url: /renovation/operation/operate
+  headers:
+    accessToken:
+  data:
+    ccPersons:
+    operateType: 60
+    opinion: "这是测试的专项整治已进入长效管理阶段，请各部门按照工作职责加强日常管理，巩固集中整治成果"
+    renovationId:
+    senders:
+    status: 6
+  context: 专项整治长效管理流转接口测试结束

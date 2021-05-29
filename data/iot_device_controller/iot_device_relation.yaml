@@ -1,0 +1,8 @@
+# 工地与设备进行关联
+-
+  url: /iot-device/relation
+  headers:
+    accessToken:
+  data:
+    devices:
+    projectId:

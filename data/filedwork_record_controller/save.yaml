@@ -1,0 +1,15 @@
+# 外勤申请
+-
+  url: /fieldwork/save
+  headers:
+    accessToken:
+  data:
+    attachments:
+    endTime:
+    fromCity: 这是出发城市
+    length:
+    reason:
+    startTime:
+    toCity: 这是到达城市
+  assert_data: ok
+  context: 外勤申请接口测试结束

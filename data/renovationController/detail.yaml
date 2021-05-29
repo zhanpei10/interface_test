@@ -1,0 +1,8 @@
+# 查询专项整治详情
+-
+  url: /renovation/detail
+  headers:
+    accessToken:
+  data:
+    id: 233
+  context: 查看专项整治详情结束

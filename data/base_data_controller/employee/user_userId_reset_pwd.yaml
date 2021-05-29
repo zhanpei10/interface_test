@@ -1,0 +1,6 @@
+# 重置创建用户的密码
+-
+  url: http://10.111.32.82:10219/uums/users/
+  headers:
+    accessToken:
+  data:

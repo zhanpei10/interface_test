@@ -1,0 +1,5 @@
+# 获取所有的iot设备列表类型 get
+-
+  url: /iot-device/type
+  headers:
+    accessToken:

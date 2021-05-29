@@ -1,0 +1,14 @@
+# 查询最新抓拍和最新事件
+-
+  url: /truck/newest/capture
+  headers:
+    accessToken:
+  data:
+    type: 2
+
+-
+  url: /truck/newest/capture
+  headers:
+    accessToken:
+  data:
+    type: 1

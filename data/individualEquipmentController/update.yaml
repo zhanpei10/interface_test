@@ -1,0 +1,33 @@
+# 修改单兵装备
+-
+  url: /individualEquipment/update
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "这是修改过的设备品牌"
+    buyDate: "2021-06-29"
+    buyDateTimestamp: 1624896000000
+    equipmentCategory: 1
+    equipmentCode:
+    equipmentName: "这是修改过的设备名称"
+    equipmentStatus: 99
+    equipmentType: 3
+    equipmentTypeName: "执法记录仪"
+    euqipmentModel: "这是修改过的设备型号"
+    gbNo:
+    id:
+    mainTabIndex: 1
+    markNo:
+    orgName:
+    owerName: "詹培"
+    ownerId: 100537
+    password:
+    platform:
+    platformId:
+    platformName:
+    protocol:
+    useStatus: 1
+    userName:
+    vmsAddress:
+  context: 修改单兵装备测试结束

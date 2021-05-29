@@ -1,0 +1,39 @@
+# 批量停止全部字典主类的状态
+-
+  url: "/dict-manage/status/update/batch"
+  headers:
+    accessToken:
+  data:
+    enabled: false
+    selectAll: true
+# 批量启动所有的字典主类
+-
+  url: "/dict-manage/status/update/batch"
+  headers:
+    accessToken:
+  data:
+    enabled: true
+    selectAll: true
+# 批量停用部分字典主项
+-
+  url: "/dict-manage/status/update/batch"
+  headers:
+    accessToken:
+  data:
+    enabled: false
+    ids:
+      - 137
+      - 133
+# 批量启用部分字典
+-
+  url: "/dict-manage/status/update/batch"
+  headers:
+    accessToken:
+  data:
+    enabled: true
+    ids:
+      - 137
+      - 133
+
+
+

@@ -1,0 +1,13 @@
+# 查询会议通知详情
+#-
+#  url: /meeting/notice/
+#  headers:
+#    accessToken:
+#  context: 查询草稿箱详情
+
+# 查询会议通知详情
+-
+  url: /meeting/notice/
+  headers:
+    accessToken:
+  context: 查询已发送会议通知详情

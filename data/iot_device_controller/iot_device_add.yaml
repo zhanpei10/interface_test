@@ -1,0 +1,12 @@
+# 新增设备
+-
+  url: /iot-device/add
+  headers:
+    accessToken:
+  data:
+    gridName: "梅西002"
+    gridSerial: "6c40d0db8e1b42ed964d4fdfaa4e2b5d"
+    name: # 设备名称
+    remark: "这是设备的备注信息哈"
+    serial: # 设备编号
+    type: 2

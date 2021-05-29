@@ -1,0 +1,8 @@
+# 我的日程
+-
+  url: /meeting/notice/schedule
+  headers:
+    accessToken:
+  data:
+    date:
+  context: 我的日程当中展示会议列表接口测试

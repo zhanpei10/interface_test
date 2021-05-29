@@ -1,0 +1,5 @@
+# 删除设备
+-
+  url: /iot-device/
+  headers:
+    accessToken:

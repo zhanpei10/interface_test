@@ -1,0 +1,5 @@
+# 获取事件的时间轴  get
+-
+  url: /case/timershaft/
+  headers:
+    accessToken:

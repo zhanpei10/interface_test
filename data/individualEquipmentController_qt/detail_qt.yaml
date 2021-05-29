@@ -1,0 +1,8 @@
+# 查看其他装备详情
+-
+  url: /individualEquipment/detail
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 查看其他装备详情接口测试结束

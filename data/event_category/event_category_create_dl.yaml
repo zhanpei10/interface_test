@@ -1,0 +1,11 @@
+# 新增事件大类
+-
+  url: /event-category/create
+  headers:
+    accessToken:
+  data:
+    attribute: "CUSTOMIZED"
+    eventStatus: 1
+    eventTypeAbbreviation: "at"
+    eventTypeName: "autoTest"
+    type: 0

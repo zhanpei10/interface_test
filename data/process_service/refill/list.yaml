@@ -1,0 +1,93 @@
+# 回填点列表查询
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    orderBy: "start_time"
+    page: 1
+    pageSize: 30
+    type: 0
+
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    orderBy: "start_time"
+    page: 1
+    pageSize: 30
+    type: 3
+
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    orderBy: "start_time"
+    page: 1
+    pageSize: 30
+    startTime0:
+    startTime1:
+    type: 0
+
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    endTime0:
+    endTime1:
+    orderBy: "start_time"
+    page: 1
+    pageSize: 30
+    type: 0
+
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    keyword: "HT20201123002"
+    orderBy: "start_time"
+    page: 1
+    pageSize: 30
+    type: 0
+
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "ASC"
+    orderBy: "start_time"
+    page: 1
+    pageSize: 30
+    type: 0
+
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "ASC"
+    orderBy: "end_time"
+    page: 1
+    pageSize: 30
+    type: 0
+
+-
+  url: /refill/list
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    orderBy: "end_time"
+    page: 1
+    pageSize: 30
+    type: 0

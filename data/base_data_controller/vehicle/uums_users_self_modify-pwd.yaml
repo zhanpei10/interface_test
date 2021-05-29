@@ -1,0 +1,10 @@
+# 修改登录用户的密码
+-
+  url: http://10.111.32.82:10219/uums/users/self/modify-pwd
+  headers:
+    accessToken:
+  data:
+    confirmPassword: "kobe8888"
+    id:
+    newPassword: "kobe8888"
+    oldPassword: "kobe8888"

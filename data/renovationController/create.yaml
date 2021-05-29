@@ -1,0 +1,20 @@
+# 新建专项整治附件
+-
+  url: /renovation/create
+  headers:
+    accessToken:
+  data:
+    aim: "这是专项整治的目的"
+    attendOrganId: "1"
+    content: "<p>这是专项整治的正文</p>"
+    coverUrl: "/skyline/img/special-rectification-template-2.131adc78.png"
+    endTimestamp:
+    leadOrganId: "1"
+    renovationAnnexReqList:
+    renovationCategory: 4236
+    renovationLevel: 2
+    renovationType: 2
+    startTimestamp:
+    status: 1
+    title:
+  context: 添加专项整治接口测试结束

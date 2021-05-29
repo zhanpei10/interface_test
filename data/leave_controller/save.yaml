@@ -1,0 +1,22 @@
+# 请假申请的修改
+
+-
+  url: /leave/config/query
+  headers:
+    accessToken:
+  data:
+    page: 1
+    pageSize: 30
+  context: 获取请假类型id
+-
+  url: /leave/save
+  headers:
+    accessToken:
+  data:
+    attachments:
+    configId:  # 假期类型
+    endTime: # 结束时间
+    length: # 请假的时长
+    reason: 这是请假的原因  # 请假的原因
+    startTime: # 请假的开始时间
+  context: 请假申请接口测试

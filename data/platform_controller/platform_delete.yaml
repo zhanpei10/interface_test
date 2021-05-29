@@ -1,0 +1,8 @@
+# 删除装备平台
+# 获取装备平台列表
+-
+  url: /platform-service/platform
+  headers:
+    accessToken:
+  data:
+    serial:

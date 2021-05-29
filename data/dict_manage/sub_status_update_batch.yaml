@@ -1,0 +1,8 @@
+-
+  url: "/dict-manage/status/update/batch"
+  headers:
+    accessToken:
+  data:
+    enabled: false
+    ids:
+    parentId:

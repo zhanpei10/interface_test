@@ -1,0 +1,56 @@
+# 判断案件是否合并接口测试
+-
+  url: "/case/merge-check"
+  headers:
+    accessToken:
+  data:
+    address: "上海市浦东新区X368(三三公路)"
+    alarmSubject: "临港奉贤园区F12路（D1路-G7路、D3路-园区北界）市政道路及配套工程"
+    alarmSubjectId: 20
+    appealedPerson: "科比"
+    caseType: 100000014
+    checkWay: 0
+    gridSerial: "6c40d0db8e1b42ed964d4fdfaa4e2b5d"
+    images:
+      - "http://10.111.32.82:18181/g1/M00/00/33/CvQARWCnokCAdg_HAAvTffVHNmU372.png"
+    latitude: 30.960675802229414
+    level: 2
+    longitude: 121.9065749885845
+    problemDesc: "这是问题描述"
+    processClosedTime:
+    reportTime:
+    serial:
+    source: 3
+    suspectUsers:
+    taskNumber:
+    transferDispatchTime:
+    videos:
+      - "http://10.111.32.82:18181/g1/M00/00/33/CvQARWCnokOAFrikAAklsayWSyU387.MP4"
+
+#-
+#  url: "/case/merge-check"
+#  headers:
+#    accessToken:
+#  data:
+#    address: "上海市浦东新区夏栎路233弄、236弄、333弄、336弄"
+#    alarmSubject: "三一上海产业中心B项目"
+#    alarmSubjectId: 3
+#    appealedPerson: "事件诉求人"
+#    caseType: 6004
+#    checkWay: 0
+#    gridSerial: "3cb2c8893e324519b9dabb94e5104afe"
+#    images:
+#      - "http://10.9.242.39:10219/components/fdfs/g1/M00/00/02/CvQADWCo_HSADSeVAAK1lWKaqrU251.png"
+#    latitude: 30.920003484246894
+#    level: 2
+#    longitude: 121.91895813003954
+#    problemDesc: "问题描述"
+#    processClosedTime:
+#    reportTime:
+#    serial:
+#    source: 5
+#    suspectUsers:
+#    taskNumber:
+#    transferDispatchTime:
+#    videos:
+#      - "http://10.9.242.39:10219/components/fdfs/g1/M00/00/02/CvQADWCo_LqAF3x2AAh3o8TjwOI679.mp4"

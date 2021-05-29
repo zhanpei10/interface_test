@@ -1,0 +1,7 @@
+# 删除事件小类
+-
+  url: /event-category/delete
+  headers:
+    accessToken:
+  data:
+    ids:

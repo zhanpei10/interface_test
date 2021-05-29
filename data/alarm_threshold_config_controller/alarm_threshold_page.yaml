@@ -1,0 +1,9 @@
+# 根据分页查询告警阀值
+-
+  url: /alarm-threshold/page
+  headers:
+    accessToken:
+  data:
+    keyword:
+    page: 1
+    pageSize: 30

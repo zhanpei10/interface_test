@@ -1,0 +1,13 @@
+# 获取草稿箱数据
+-
+  url: /renovation/page
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    collectStatus: 0
+    orderBy: "id"
+    page: 1
+    pageSize: 30
+    status: -1
+  context: 获取专项整治草稿列表接口测试结束

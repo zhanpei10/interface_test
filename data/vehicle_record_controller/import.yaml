@@ -1,0 +1,8 @@
+# 批量导入车辆
+-
+  url: /vehicle/import
+  headers:
+    accessToken:
+  data:
+    type: 2
+  context: 导入车辆接口测试结束

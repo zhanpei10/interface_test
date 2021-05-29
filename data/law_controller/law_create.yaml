@@ -1,0 +1,12 @@
+# 法律法规创建
+-
+  url: /law/create
+  headers:
+    accessToken:
+  data:
+    behaviorName:
+    classification:
+    isPudongUM: 1
+    library:
+    regulations:
+    terms:

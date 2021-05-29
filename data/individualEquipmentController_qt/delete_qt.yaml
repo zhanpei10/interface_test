@@ -1,0 +1,8 @@
+# 删除其他装备
+-
+  url: /individualEquipment/delete
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 删除单兵装备接口测试结束

@@ -1,0 +1,48 @@
+# 上传专项整治附件
+-
+  url: /renovation/annex/upload
+  headers:
+    accessToken:
+  context: 上传附件接口测试完成
+
+-
+  url: /renovation/update
+  headers:
+    accessToken:
+  data:
+    aim: "这是专项整治的目的"
+    attendOrganId: "1"
+    attendOrganNameList:
+      - "综合执法大队"
+    collectStatus: 0
+    content: "<p>这是专项整治的正文</p>"
+    coverUrl: "/skyline/img/special-rectification-template-2.131adc78.png"
+    createTime:
+    createTimestamp:
+    creator: 100711
+    creatorName: "kobeTest3nnnn"
+    endTime:
+    endTimestamp:
+    id:
+    leadOrganId: "1"
+    leadOrganNameList:
+      - "综合执法大队"
+    renovationAnnexReqList:
+      -
+        annexName:
+        annexType: 1
+        annexUrl:
+    renovationCategory: 4236
+    renovationCategoryName: "专项整治"
+    renovationLevel: 2
+    renovationLevelName: "省级"
+    renovationType: 2
+    startTime:
+    startTimestamp:
+    status: 1
+    statusName: "方案制定"
+    title:
+    updateTime:
+    updateTimestamp:
+    updater: 100712
+  context: 上传附件绑定专项整治接口测试完成

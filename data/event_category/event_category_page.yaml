@@ -1,0 +1,12 @@
+# 分页获取事件分类列表
+-
+  url: /event-category/page
+  headers:
+    accessToken:
+  data:
+    includeLaws: true
+    page:
+      page: 1
+      pageSize: 10
+      total: 1
+    parentId:

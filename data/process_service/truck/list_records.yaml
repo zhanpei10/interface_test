@@ -1,0 +1,9 @@
+# 查看历史申报记录
+-
+  url: /truck/list/records
+  headers:
+    accessToken:
+  data:
+    truckNum: 沪A11111
+    page: 1
+    pageSize: 60

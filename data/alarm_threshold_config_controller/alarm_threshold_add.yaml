@@ -1,0 +1,27 @@
+# 新增告警阀值
+
+-
+  url: /grid/tree
+  headers:
+    accessToken:
+  data:
+    allSub: true
+    defaultGrid: 0
+    gridSerial: "0"
+  context: 获取网格数据
+-
+  url: /alarm-threshold/add
+  headers:
+    accessToken:
+  data:
+    gridName:
+    gridSerial:
+    name:
+    threshold: "1000"
+    times:
+      -
+        begin: "00:00:00"
+        end: "23:59:59"
+    type: 2
+    unit: "毫克/立方米"
+  context: 现建告警阀值结束

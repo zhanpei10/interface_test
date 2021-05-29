@@ -1,0 +1,20 @@
+# 更新设备  put
+-
+  url: /iot-device/
+  headers:
+    accessToken:
+  data:
+    createTime:
+    creator: 100625
+    gridName: "梅西002"
+    gridSerial: "6c40d0db8e1b42ed964d4fdfaa4e2b5d"
+    id: 64
+    name: "iotName"
+    remark: "这是修改过后的设备的备注信息"
+    runStatus: 1
+    selected: false
+    serial:
+    status: 1
+    type: 2
+    typeName: "扬尘"
+    updateTime:

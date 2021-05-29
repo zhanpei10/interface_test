@@ -1,0 +1,60 @@
+# 分页查询车辆
+-
+  url: /vehicle/page
+  headers:
+    accessToken:
+  data:
+    page: 1
+    pageSize: 10
+    vehicleType: 1
+  context: 根据车辆类型去查询车辆接口测试结束
+
+-
+  url: /vehicle/page
+  headers:
+    accessToken:
+  data:
+    identification: 3
+    page: 1
+    pageSize: 10
+  context: 根据车辆标识去查询车辆接口测试结束
+
+-
+  url: /vehicle/page
+  headers:
+    accessToken:
+  data:
+    page: 1
+    pageSize: 10
+    usageStatus: 1
+  context: 根据车辆使用情况去查询车辆接口测试结束
+
+-
+  url: /vehicle/page
+  headers:
+    accessToken:
+  data:
+    orgId: 1
+    page: 1
+    pageSize: 10
+  context: 根据使用部门去查询车辆接口测试结束
+
+-
+  url: /vehicle/page
+  headers:
+    accessToken:
+  data:
+    keywords: "TES"
+    page: 1
+    pageSize: 10
+  context: 根据关键字查询车辆接口测试结束
+
+-
+  url: /vehicle/page
+  headers:
+    accessToken:
+  data:
+    keywords: "不存在的车牌号"
+    page: 1
+    pageSize: 10
+  context: 根据关键字查询车辆接口测试结束

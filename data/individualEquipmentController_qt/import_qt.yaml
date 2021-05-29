@@ -1,0 +1,8 @@
+# 批量导入其他装备
+-
+  url: /individualEquipment/import
+  headers:
+    accessToken:
+  data:
+    equipmentCategory: 2
+  context: 导入其他装备接口测试结束

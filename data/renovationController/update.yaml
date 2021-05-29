@@ -1,0 +1,60 @@
+# 更新专项整治
+-
+  url: /renovation/update
+  headers:
+    accessToken:
+  data:
+    aim: "这是修改之后的专项整治的目的"
+    attendOrganId: "1"
+    attendOrganNameList:
+      - "综合执法大队"
+    collectStatus: 0
+    content: "<p>这是专项整治的正文</p>"
+    coverUrl: "/skyline/img/special-rectification-template-2.131adc78.png"
+    createTime:
+    createTimestamp:
+    creator: 100711
+    creatorName: "kobeTest3nnnn"
+    endTime:
+    endTimestamp:
+    id:
+    leadOrganId: "1"
+    leadOrganNameList:
+     - "综合执法大队"
+    renovationAnnexReqList:
+      -
+        annexName:
+        annexType: 1
+        annexUrl:
+        createTimestamp:
+        creator: 100711
+    renovationAnnexVoList: [ { annexName: "renovation_file_1.bmp", annexType: 1,… } ]
+    0: { annexName: "renovation_file_1.bmp", annexType: 1,… }
+    annexName: "renovation_file_1.bmp"
+    annexType: 1
+    annexUrl: "http://10.111.32.82:10219/components/fdfs/g1/M00/00/46/CvQAg2DpYpGAMiGvAAO3cqawYXk775.jpg"
+    createTime: 1625907857000
+    createTimestamp: 1625907857000
+    creator: 100711
+    creatorName: "kobeTest3nnnn"
+    fileType: 3
+    id: 425
+    name: "renovation_file_1.bmp"
+    renovationId: 254
+    status: "success"
+    uid: 1
+    url: "http://10.111.32.82:10219/components/fdfs/g1/M00/00/46/CvQAg2DpYpGAMiGvAAO3cqawYXk775.jpg"
+    renovationCategory: 4236
+    renovationCategoryName: "专项整治"
+    renovationLevel: 2
+    renovationLevelName: "省级"
+    renovationType: 2
+    startTime: 1628499854000
+    startTimestamp: 1628499854000
+    status: 1
+    statusName: "长效管理"
+    title: "autoTest_13"
+    updateTime: 1625907857000
+    updateTimestamp: 1625907857000
+    updater: 100711
+    updaterName: "kobeTest3nnnn"

@@ -1,0 +1,31 @@
+# 修改单兵装备
+-
+  url: /individualEquipment/update
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "这是修改后的品牌"
+    buyDate: "2021-07-03"
+    buyDateTimestamp: 1625241600000
+    equipmentCategory: 2
+    equipmentCode:
+    equipmentName: "autoTest_qt_4"
+    equipmentStatus: 99
+    equipmentType: 10003
+    equipmentTypeName: "其他"
+    euqipmentModel: "这是修改后的品牌"
+    gbNo:
+    id:
+    mainTabIndex: 2
+    markNo: ""
+    orgName: ""
+    ownerId:
+    password: ""
+    platform: ""
+    platformName: ""
+    protocol:
+    useStatus: 3
+    userName:
+    vmsAddress:
+  context: 修改其他装备测试结束

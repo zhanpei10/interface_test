@@ -1,0 +1,16 @@
+# 新增事件小类
+-
+  url: /event-category/create
+  headers:
+    accessToken:
+  data:
+    alarmWindow: 1
+    alarmWindowUnit: 2
+    attribute: "CUSTOMIZED"
+    eventStatus: 1
+    eventTypeName: "13123"
+    lawIds:
+      - "2679"
+    parentId:
+    sceneType: 1
+    type: 1

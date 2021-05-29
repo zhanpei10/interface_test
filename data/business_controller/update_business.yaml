@@ -1,0 +1,15 @@
+-
+  url: /business
+  headers:
+    accessToken:
+  data:
+    address: "上海市浦东新区南汇新城镇银飞路166号"
+    businessType: 3
+    images:
+    latitude: 30.919891180454034
+    license: 1
+    longitude: 121.9104466853325
+    name:
+    responsiblePerson:
+    serial:
+    telephone: "18328816524"

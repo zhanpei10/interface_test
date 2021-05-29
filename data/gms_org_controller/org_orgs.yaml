@@ -1,0 +1,12 @@
+# 查询部门列表
+-
+  url: /org/orgs
+  headers:
+    accessToken:
+  data:
+    pagination: 0
+    rootType: 0
+    orgName:
+    extra.divisionLevel:
+    extra.divisionCode:
+    extra.orgType:

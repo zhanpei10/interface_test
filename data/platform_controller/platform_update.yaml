@@ -1,0 +1,18 @@
+# 修改装备平台
+-
+  url: /platform-service/platform
+  headers:
+    accessToken:
+  data:
+    createTime:
+    isCreate: false
+    password: "8888888"
+    platformId:
+    platformIp:
+    platformName: test_update
+    platformType:
+    port:
+    protocol: 2
+    serial:
+    status: 1
+    username:

@@ -1,0 +1,9 @@
+# 设备列表分页查询
+-
+  url: /iot-device/list
+  headers:
+    accessToken:
+  data:
+    name:
+    page: 1
+    pageSize: 30

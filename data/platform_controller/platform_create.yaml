@@ -1,0 +1,14 @@
+# 新建装备平台
+-
+  url: /platform-service/platform
+  headers:
+    accessToken:
+  data:
+    password: "123456"
+    platformId:
+    platformIp:
+    platformName:
+    platformType: 1
+    port:
+    protocol: 2
+    username:

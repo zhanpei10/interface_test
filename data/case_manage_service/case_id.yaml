@@ -1,0 +1,5 @@
+# 获取案件详情信息
+-
+  url: "/case/"
+  headers:
+    accessToken:

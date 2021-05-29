@@ -1,0 +1,60 @@
+-
+  url: "/business/list"
+  headers:
+    accessToken:
+  data:
+    hasLicense:
+    keyword:
+    maxCase:
+    minCase:
+    page:
+      page: 1
+      pageSize: 15
+  context: 获得默认商户列表接口测试结束
+-
+  url: "/business/list"
+  headers:
+    accessToken:
+  data:
+    hasLicense: 1
+    maxCase:
+    minCase:
+    page:
+      page: 1
+      pageSize: 15
+  context: 获得持证经营商户列表接口测试结束
+-
+  url: "/business/list"
+  headers:
+    accessToken:
+  data:
+    hasLicense: 0
+    maxCase:
+    minCase:
+    page:
+      page: 1
+      pageSize: 15
+  context: 获得无证经营商户列表接口测试结束
+-
+  url: "/business/list"
+  headers:
+    accessToken:
+  data:
+    maxCase: 6
+    minCase: 2
+    page:
+      page: 1
+      pageSize: 15
+  context: 根据违法次数获取商户列表接口测试结束
+-
+  url: "/business/list"
+  headers:
+    accessToken:
+  data:
+    keyword: "autoTest"
+    maxCase:
+    minCase:
+    page:
+      page: 1
+      pageSize: 90
+  context: 获得无证经营商户列表接口测试结束

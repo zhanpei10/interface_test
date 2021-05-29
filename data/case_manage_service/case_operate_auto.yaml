@@ -1,0 +1,9 @@
+# 获取案件阶段受理方式测试  get
+-
+  url: /case/operate-auto
+  headers:
+    accessToken:
+  data:
+    id: 30857
+    phase: 2
+    status: 1

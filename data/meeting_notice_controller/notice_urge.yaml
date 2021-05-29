@@ -1,0 +1,8 @@
+# 催办会议通知
+-
+  url: /meeting/notice/urge
+  headers:
+    accessToken:
+  data:
+    id: 143
+  context: 催办会议通知接口测试

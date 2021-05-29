@@ -1,0 +1,150 @@
+# 新建单兵装备
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "品牌"
+    buyDateTimestamp: "2021-06-27"
+    deviceNo: ""
+    equipmentCategory: 1
+    equipmentCode: ""
+    equipmentName:
+    equipmentType: 4  # 设备类型  4 手持执法终端
+    euqipmentModel: "测试型号"
+    gbNo: ""
+    mainTabIndex: 1
+    markNo: ""
+    orgName: ""
+    ownerId: 100537
+    password: ""
+    platform: ""
+    platformId: ""
+    platformName: ""
+    protocol: null
+    simCardNo: ""
+    useStatus: 1 # 使用状态  1 正常
+    userName: ""
+    vmsAddress: ""
+  context: 新增手持执法终端单兵装备接口测试完成
+
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "品牌"
+    buyDateTimestamp: "2021-06-27"
+    deviceNo: ""
+    equipmentCategory: 1
+    equipmentCode: ""
+    equipmentName:
+    equipmentType: 3  # 设备类型  表示执法记录仪器
+    euqipmentModel: "测试型号"
+    gbNo: ""
+    mainTabIndex: 1
+    markNo: ""
+    orgName: ""
+    ownerId: 100537
+    password: ""
+    platform: ""
+    platformId: ""
+    platformName: ""
+    protocol: null
+    simCardNo: ""
+    useStatus: 1 # 使用状态  1 正常
+    userName: ""
+    vmsAddress: ""
+  context: 新增执法记录仪类型单兵装备接口测试完成
+
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "品牌"
+    buyDateTimestamp: "2021-06-27"
+    deviceNo: ""
+    equipmentCategory: 1
+    equipmentCode: ""
+    equipmentName:
+    equipmentType: 5  # 设备类型  表示对讲机
+    euqipmentModel: "测试型号"
+    gbNo: ""
+    mainTabIndex: 1
+    markNo: ""
+    orgName: ""
+    ownerId: 100537
+    password: ""
+    platform: ""
+    platformId: ""
+    platformName: ""
+    protocol: null
+    simCardNo: ""
+    useStatus: 1 # 使用状态  1 正常
+    userName: ""
+    vmsAddress: ""
+  context: 新增对讲机类型单兵装备接口测试完成
+
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "品牌"
+    buyDateTimestamp: "2021-06-27"
+    deviceNo: ""
+    equipmentCategory: 1
+    equipmentCode: ""
+    equipmentName:
+    equipmentType: 6  # 设备类型  录音笔
+    euqipmentModel: "测试型号"
+    gbNo: ""
+    mainTabIndex: 1
+    markNo: ""
+    orgName: ""
+    ownerId: 100537
+    password: ""
+    platform: ""
+    platformId: ""
+    platformName: ""
+    protocol: null
+    simCardNo: ""
+    useStatus: 1 # 使用状态  1 正常
+    userName: ""
+    vmsAddress: ""
+  context: 新增录音笔类型单兵装备接口测试完成
+
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "品牌"
+    buyDateTimestamp: "2021-06-27"
+    deviceNo: ""
+    equipmentCategory: 1
+    equipmentCode: ""
+    equipmentName:
+    equipmentType: 101 # 设备类型  表示执法记录仪器
+    euqipmentModel: "测试型号"
+    gbNo: ""
+    mainTabIndex: 1
+    markNo: ""
+    orgName: ""
+    ownerId: 100537
+    password: ""
+    platform: ""
+    platformId: ""
+    platformName: ""
+    protocol: null
+    simCardNo: ""
+    useStatus: 1 # 使用状态  1 正常
+    userName: ""
+    vmsAddress: ""
+  context: 新增其他类型单兵装备接口测试完成

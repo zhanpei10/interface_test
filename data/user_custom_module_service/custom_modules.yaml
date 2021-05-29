@@ -1,0 +1,13 @@
+# 保存自定义应用
+-
+  url: /custom/modules
+  headers:
+    accessToken:
+  data:
+    modules:
+      - "SG000302"
+      - "SG000301"
+      - "SG000317"
+      - "SG000305"
+      - "SG0007003"
+      - "SG0007004"

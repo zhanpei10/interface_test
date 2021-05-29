@@ -1,0 +1,157 @@
+# 案件流程处理相关接口测试
+# 受理操作流程
+-
+  url: "/case/operate"
+  headers:
+    accessToken:
+  data:
+    attachments:
+      images:
+        -
+          name: "【安全通报】微信0day高危漏洞.png"
+          url:  "http://10.111.32.82:10219/components/fdfs/g1/M00/00/02/CvQADWCpBUWAGH7XAAvTffVHNmU093.png"
+      records:
+      videos:
+    id:
+    illegalSubjectName: ""
+    lawIds: "3032"
+    operate: "REGISTER"
+    opinion: "同意受理，请予以派遣！"
+
+# 派遣操作流程
+-
+  url: '/case/operate'
+  headers:
+    accessToken:
+  data:
+    attachments:
+      images:
+        -
+          name: "【安全通报】微信0day高危漏洞.png"
+          url: "http://10.111.32.82:10219/components/fdfs/g1/M00/00/02/CvQADWCpCGKAJ4vtAAvTffVHNmU544.png"
+      records:
+      videos:
+    dispatchWay: 1
+    id:
+    operate: "DISPATCH"
+    operatorParams:
+      assist: 1
+      organId: 1
+      roleIds:
+        - 1
+        - 3
+      userIds:
+    opinion: "请尽快处置，并在处置完成后及时反馈！"
+
+# 接单流程操作
+-
+  url: '/case/operate'
+  headers:
+    accessToken:
+  data:
+    attachments:
+      images:
+      videos:
+      records:
+    extend:
+      remark: "已接单，将在规定时限内前往！"
+      deadLine:
+    id:
+    operate: "SOLVE_ORDER"
+
+# 到场事件处理
+-
+  url: "/case/operate"
+  headers:
+    accessToken:
+  data:
+    attachments:
+      images:
+        -
+          name: "【安全通报】微信0day高危漏洞.png"
+          url: "http://10.111.32.82:10219/components/fdfs/g1/M00/00/02/CvQADWCpDgKASkXFAAvTffVHNmU545.png"
+      records:
+      videos:
+    extend:
+      illegalFact: "违法依据和事实"
+      remark: "已到场，将在规定时限内予以处置！"
+      lawIds:
+        - "3032"
+      time: "2021-05-28 16:04:46"
+      userId: 31
+    id:
+    operate: "SOLVE_PRESENT"
+# 案件处置
+-
+  url: '/case/operate'
+  headers:
+    accessToken:
+  data:
+    assistPersonId: "35"
+    attachments:
+      images:
+        -
+          name: "告警详情大窗左侧显示UI.png"
+          url: "http://10.111.32.82:18181/g1/M00/00/35/CvQARWC0T5CACIBgAAw2r5cvTJo091.png"
+      records:
+      videos:
+    caseDealType: "0"
+    dealDepartmentId: 408
+    dealEndTime: ""
+    dealResult: "1"
+    dealStartTime: ""
+    dealTime:
+    dealWay: "0"
+    id:
+    images:
+    operate: "SOLVE"
+    opinion: "处置完成，请及时核查！"
+    performWay: "0"
+    rectifyWay: "0"
+    sponsorId: 100625
+    suspectUsers:
+      -
+        suspectAddress: "大大撒大大萨达"
+        suspectIdType: 0
+        suspectLegalPerson: "lakers"
+        suspectName: "kobe"
+        suspectPost: "test"
+        suspectSocialCreditCode: "kobe24and8"
+        suspectTel: "18328816523"
+        suspectType: 0
+# 事件核查
+-
+  url: "/case/operate"
+  headers:
+    accessToken:
+  data:
+    assistPersonId: "35"
+    attachments:
+      images:
+        - name: "告警详情大窗左侧显示UI.png"
+          url: "http://10.111.32.82:18181/g1/M00/00/35/CvQARWC0T5CACIBgAAw2r5cvTJo091.png"
+      records:
+      videos:
+    id:
+    images:
+      - "http://10.111.32.82:18181/g1/M00/00/35/CvQARWC0Ug6Aevo8AAGYylecVOQ372.png"
+    operate: "CHECK"
+    opinion: "核查通过，请予以归档！"
+    verifyResult: true
+
+# 案件归档
+-
+  url: '/case/operate'
+  headers:
+    accessToken:
+  data:
+    attachments:
+      images:
+        -
+          name: "告警详情大窗左侧显示UI.png"
+          url: "http://10.111.32.82:18181/g1/M00/00/35/CvQARWC0T5CACIBgAAw2r5cvTJo091.png"
+      records:
+      videos:
+    id:
+    operate: "CLOSE"
+    opinion: "同意归档！"

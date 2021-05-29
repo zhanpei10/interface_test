@@ -1,0 +1,12 @@
+-
+  url: "/dict-manage/sub"
+  headers:
+    accessToken:
+  data:
+    content: "auto_context"
+    description: "auto_description"
+    enabled: true
+    parentId:
+    sortWeight: 1
+    subModuleName:
+    subModuleType:

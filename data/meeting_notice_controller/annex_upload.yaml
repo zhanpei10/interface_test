@@ -1,0 +1,67 @@
+# 上传附件接口测试
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: word_test.docx
+#  context: word附件上传接口测试  pass
+
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: excel_test.dasdasd
+#  context: xlsx格式excel附件上传接口测试 pass
+
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: excel_test.dasdasd
+#  context: xls格式excel附件上传接口测试 pass
+
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: excel_test.dasdasd
+#  context: xls格式excel附件上传接口测试 fail
+
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: word_test.pdf
+#  context: pdf格式附件上传接口测试  pass
+
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: 89c769d1-4372-4403-a048-1eda6ae054f5.jpg
+#  context: 图片格式附件上传接口测试 pass
+
+-
+  url: /meeting/notice/annex/upload
+  headers:
+    accessToken:
+  file_name: mp4_test.mp4
+  context: 视频格式附件上传接口测试 pass
+
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: lingan-2.1.0-164-2021-07-09_17_01.apk
+#  context: 其他格式附件上传接口测试   fail
+#
+#-
+#  url: /meeting/notice/annex/upload
+#  headers:
+#    accessToken:
+#  file_name: T070029_s001_20210623185802_1000 (2).MP3
+#  context: 音频附件上传接口测试   pass
+
+
+
+

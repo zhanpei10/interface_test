@@ -1,0 +1,11 @@
+# 加班申请创建
+-
+  url: /overtime
+  headers:
+    accessToken:
+  data:
+    attachments:
+    overTimeBeginTimestamp:
+    overTimeEndTimestamp:
+    overtime:
+    reason: 这是请假的原因

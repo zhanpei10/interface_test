@@ -1,0 +1,8 @@
+# 删除专项整治附件
+-
+  url: /renovation/delete
+  headers:
+    accessToken:
+  data:
+    id:
+  context: 删除专项整治接口测试结束

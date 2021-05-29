@@ -1,0 +1,9 @@
+# 百度路线规划
+-
+  url: /truck/driving
+  headers:
+    accessToken:
+  data:
+    destination: "30.911975,121.957376"
+    origin: "30.916095,121.932760"
+    waypoints: "30.950398,121.890749%7C30.951214,121.887851"

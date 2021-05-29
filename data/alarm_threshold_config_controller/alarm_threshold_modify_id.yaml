@@ -1,0 +1,19 @@
+# 根据id修改告警阀值
+-
+  url: /alarm-threshold/modify/
+  headers:
+    accessToken:
+  data:
+    begin: "00:00:00"
+    createTime:
+    creator:
+    end: "23:59:59"
+    gridName:
+    gridSerial:
+    id:
+    name: "autoTestName"
+    threshold: "1000"
+    type: 2
+    unit: "毫克/立方米"
+    updateTime:
+    updater:

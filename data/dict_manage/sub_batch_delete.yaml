@@ -1,0 +1,6 @@
+-
+  url: /dict-manage/sub/batch/delete
+  headers:
+    accessToken:
+  data:
+    ids:

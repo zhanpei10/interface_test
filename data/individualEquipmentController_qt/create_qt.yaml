@@ -1,0 +1,79 @@
+# 新建其他装备
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "这是设备品牌"
+    buyDateTimestamp: "2021-07-03"
+    equipmentCategory: 2
+    equipmentCode:
+    equipmentName:
+    equipmentType: 10001 # 设备类型为 便携式打印机
+    euqipmentModel: "这是设备型号"
+    gbNo:
+    mainTabIndex: 2
+    markNo:
+    orgName:
+    ownerId:
+    password:
+    platform:
+    platformName:
+    protocol:
+    useStatus: 1
+    userName:
+    vmsAddress:
+  context: 新增便携式打印机其他装备接口测试完成
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "这是设备品牌"
+    buyDateTimestamp: "2021-07-03"
+    equipmentCategory: 2
+    equipmentCode:
+    equipmentName:
+    equipmentType: 10002 # 设备类型为 采集工作站
+    euqipmentModel: "这是设备型号"
+    gbNo:
+    mainTabIndex: 2
+    markNo:
+    orgName:
+    ownerId:
+    password:
+    platform:
+    platformName:
+    protocol:
+    useStatus: 1
+    userName:
+    vmsAddress:
+  context: 新增采集工作站其他装备接口测试完成
+-
+  url: /individualEquipment/create
+  headers:
+    accessToken:
+  data:
+    accessPlatformStatus: 0
+    brand: "这是设备品牌"
+    buyDateTimestamp: "2021-07-03"
+    equipmentCategory: 2
+    equipmentCode:
+    equipmentName:
+    equipmentType: 10003 # 设备类型为 其他
+    euqipmentModel: "这是设备型号"
+    gbNo:
+    mainTabIndex: 2
+    markNo:
+    orgName:
+    ownerId:
+    password:
+    platform:
+    platformName:
+    protocol:
+    useStatus: 1
+    userName:
+    vmsAddress:
+  context: 新增其他 其他装备接口测试完成

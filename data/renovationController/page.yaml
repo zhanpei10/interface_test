@@ -1,0 +1,52 @@
+# 获取专项整治列表
+-
+  url: /renovation/page
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    collectStatus: 0
+    orderBy: "id"
+    page: 1
+    pageSize: 30
+  context: 查看所有的专项整治接口测试结束
+
+-
+  url: /renovation/page
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    collectStatus: 0
+    orderBy: "id"
+    page: 1
+    pageSize: 30
+    renovationCategory: 4235
+  context: 根据执法分类查看专项整治接口测试结束
+
+-
+  url: /renovation/page
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    collectStatus: 0
+    orderBy: "id"
+    page: 1
+    pageSize: 30
+    status: 2
+  context: 根据状态（任务下发）查看专项整治接口测试结束
+
+
+-
+  url: /renovation/page
+  headers:
+    accessToken:
+  data:
+    ascOrDesc: "DESC"
+    collectStatus: 0
+    orderBy: "id"
+    page: 1
+    pageSize: 30
+    title: "autoTest"
+  context: 根据关键字查看专项整治接口测试结束

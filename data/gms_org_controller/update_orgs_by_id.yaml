@@ -1,0 +1,19 @@
+# 根据部门id修改部门信息
+-
+  url: http://10.111.32.82:10219/uums/orgs/
+  headers:
+    accessToken:
+  data:
+    extra:
+      address: "这是修改后的地址"
+      rea: 213
+      concat: "18328876256"
+      divisionCode: "120101001"
+      divisionCodeLabel: "12,1201,120101,120101001"
+      divisionLevel: 3
+      orgType: "BusinessOrg"
+    organId:
+    organName: "organName_update"
+    parentOrgId:
+    remark: "这是修改后的部门"
+    rootType: 0

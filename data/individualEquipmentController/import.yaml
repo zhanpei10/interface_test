@@ -1,0 +1,8 @@
+# 批量的导入单兵装备
+-
+  url: /individualEquipment/import
+  headers:
+    accessToken:
+  data:
+    equipmentCategory: 1
+  context: 导入单兵装备接口测试结束

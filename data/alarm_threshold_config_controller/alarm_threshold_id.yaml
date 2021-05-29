@@ -1,0 +1,7 @@
+# 根据查询告警阀值
+-
+  url: /alarm-threshold/
+  headers:
+    accessToken:
+
+    

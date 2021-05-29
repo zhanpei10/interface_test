@@ -1,0 +1,54 @@
+# 创建用户
+-
+  url: "/user/create"
+  headers:
+    accessToken:
+  data:
+    allowLocation: 1
+    background: "共青团员"
+    birthday: "1995-07-05"
+    cellphone: "18328826524"
+    currentEmpTime: "2021-05-11"
+    currentPostDate: "2021-05-19"
+    degree: "学士"
+    department: "南汇新城镇中队"
+    departmentPhone: "313"
+    edBackground: "大学专科"
+    edBackgroundType: "全日制教育学历"
+    employeeDescription: "3213123"
+    employeeLevel: "县处级副职"
+    employeeNum: "3123123"
+    employeeStatus: "离职"
+    employeeTitle: "二级高级主办"
+    employeeType: "综合管理类"
+    executeCertificate: 0
+    executeCode: ""
+    executeEndDate: ""
+    executeStartDate: ""
+    gender: 0
+    gridSerial: ""
+    haveLawDegree: 0
+    havePoliceCard: 0
+    identityId: "511528199507052818"
+    imageUrl: ""
+    isAdministrative: 0
+    joinDate: "2021-05-18"
+    name:
+    nation: "汉族"
+    orgId: "3"
+    personFrom: "部队转业"
+    policeCode: ""
+    policeEndDate: ""
+    policeStartDate: ""
+    postName: "副中队长"
+    remark: "312313"
+    roleIds: "5"
+    roles:
+      -
+    school: "31231"
+    startWorkDate: "2021-05-10"
+    subject: "3123"
+    type: 1
+    unit: "浦东区局"
+    userId:
+    username:

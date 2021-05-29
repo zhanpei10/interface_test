@@ -1,0 +1,5 @@
+# 通过token获取登录信息
+-
+  url: http://10.111.32.82:10219/uums/token/
+  headers:
+    accessToken:
