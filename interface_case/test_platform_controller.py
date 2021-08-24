@@ -17,7 +17,7 @@ class TestPlatformController:
         '''
         log().info('-------------装备平台接口测试开始--------------------')
         cls.kw = InterfaceKey()
-        cls.host = cls.host = get_url('skyline_sit', 'sit_host')
+        cls.host = get_url()
         cls.accessToken = get_access_token()
         # 设置新建平台参数
         cls.platformIp = socket.inet_ntoa(struct.pack('>I', random.randint(1, 0xffffffff)))  # ip

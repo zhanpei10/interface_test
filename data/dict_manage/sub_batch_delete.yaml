@@ -1,6 +1,6 @@
 -
-  url: /dict-manage/sub/batch/delete
+  url: /dict-manage/sub/batch/delete/?
   headers:
     accessToken:
   data:
-    ids:
+  context: 批量删除子类接口测试结束

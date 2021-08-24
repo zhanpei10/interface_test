@@ -3,6 +3,7 @@ import pytest
 from api_keyword.interface_keyword import InterfaceKey
 from common.common_method import *
 import random
+import time
 import uuid
 
 
@@ -16,8 +17,11 @@ class TestBusiness:
         '''
         log().info('-----------商户相关接口测试开始-------------')
         set_class_common(cls)
+        # 商户名称
         cls.name = 'autoTest' + str(uuid.uuid1())
+        # 商户负责人
         cls.responsiblePerson = 'auto_people' + str(random.randint(100, 300))
+        #
         cls.keyword = None
         cls.serial = None
         cls.serials = None
@@ -31,6 +35,9 @@ class TestBusiness:
         # 网格信息
         cls.gridSerial = None
         cls.gridSerials = None
+        # 商户关联事件更新时间设置 为近7天
+        cls.eventRefreshStartTime = int(time.time()) * 1000 - (30 * 24 * 60 * 60 * 1000)
+        cls.eventRefreshEndTime = int(time.time()) * 1000
 
     @classmethod
     def teardown_class(cls):
@@ -120,6 +127,7 @@ class TestBusiness:
         '''
         log().info('商户关联视频源接口测试')
         if 'resources' in data['url']:
+            # 获取视频源信息
             resourceSerial_data = get_parameter_by_interface(self, data, 'post', 'resourceSerial', data['context'])
             TestBusiness.resourceSerials = resourceSerial_data[1:3]
         else:
@@ -135,6 +143,7 @@ class TestBusiness:
         :return:
         '''
         log().info('>>>删除商户接口测试开始')
+        # 根据商户编号，判断删除一个还是删除多个
         if self.serials is None:
             res = set_request(self, data, 'delete', address_id=self.serial)
             make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])

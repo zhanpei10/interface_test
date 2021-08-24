@@ -58,9 +58,11 @@
     scene: 3
     sources:
       - 1
+      - 5
+      - 4
+      - 1
     workTimeLimit: 0
   context: 获取事件来源为AIOT违法事件列表接口测试结束
-
 -
   url: /case/list
   headers:
@@ -146,18 +148,20 @@
   headers:
     accessToken:
   data:
-    cameras:
     caseProcessExists: 0
     caseTypes:
     discovery: -1
     eventRefreshTimeOrder: "DESC"
     gridSerials:
-    keywords:
     page: 1
     pageSize: 30
     phases:
     scene: 3
     sources:
+      - 5
+      - 4
+      - 3
+      - 1
     statuses:
     workTimeLimit: 0
   context: 根据事发地点（视频源）查询违法事件列表接口测试结束
@@ -167,21 +171,20 @@
   headers:
     accessToken:
   data:
-    cameras:
     caseProcessExists: 0
     caseTypes:
     discovery: -1
-    eventRefreshEndTime: 1626424067829
-    eventRefreshStartTime: 1625905667829
+    eventRefreshEndTime:
+    eventRefreshStartTime:
     eventRefreshTimeOrder: "DESC"
-    gridSerials:
-    keywords: ""
     page: 1
     pageSize: 30
-    phases:
     scene: 3
     sources:
-    statuses:
+      - 5
+      - 4
+      - 3
+      - 1
     workTimeLimit: 0
   context: 根据更新时间查询违法事件列表接口测试结束
 
@@ -190,19 +193,19 @@
   headers:
     accessToken:
   data:
-    cameras:
     caseProcessExists: 0
     caseTypes:
     discovery: -1
     eventRefreshTimeOrder: "DESC"
-    gridSerials:
-    keywords: "20210"
+    keywords: "上海市"
     page: 1
     pageSize: 30
-    phases:
     scene: 3
     sources:
-    statuses:
+      - 5
+      - 4
+      - 3
+      - 1
     workTimeLimit: 0
   context: 根据关键字查询违法事件列表接口测试结束
 

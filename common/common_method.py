@@ -43,7 +43,7 @@ def get_data_by_yaml(path):
     return data
 
 
-def get_url(name, key):
+def get_url():
     '''
     读取配置文件当中的接口地址信息
     :param name:
@@ -52,6 +52,8 @@ def get_url(name, key):
     '''
     conn = configparser.ConfigParser()
     conn.read(filename() + '/config/api_config.ini')
+    name = 'SKYLINE_LG_Y'
+    key = 'host'
     path = conn.get(name.upper(), key)
     return path
 
@@ -87,12 +89,13 @@ def log():
 
 
 def get_access_token():
-    url = 'http://10.111.32.82:10219/uums/auth/token'
+    # url = 'http://10.111.32.82:10219/uums/auth/token'
+    url = get_url() + 'uums/auth/token'
     data = {
         "grantType": "password",
         "identifyCode": "",
         "password": "kobe8888",
-        "username": "kobeAdmin001",
+        "username": "kobekq1",
     }
     res = InterfaceKey().do_post(path=url, json=data)
     data = get_data_by_json(res.text, 'accessToken')
@@ -197,9 +200,9 @@ def set_request(obj, data, method=None, address_id=None, import_file=None):
     '''
     # 拼接url
     if address_id:
-        url = obj.host + data['url'] + str(address_id)
+        url = obj.host + 'whale-openapi' + data['url'] + str(address_id)
     else:
-        url = obj.host + data['url']
+        url = obj.host + 'whale-openapi' + data['url']
     # 设置请求头
     if 'headers' in data.keys():
         headers = set_value(obj, **data['headers'])
@@ -243,7 +246,8 @@ def set_class_common(cls):
     :return:
     '''
     cls.kw = InterfaceKey()
-    cls.host = cls.host = get_url('skyline_sit', 'sit_host')
+    # cls.host = get_url('skyline_sit', 'sit_host')
+    cls.host = get_url()
     # cls.host = cls.host = get_url('SKYLINE_THREE', 'host')
     cls.accessToken = get_access_token()
 
@@ -256,27 +260,33 @@ def get_parameter_by_interface(obj, data, method, key, context=None, import_file
     :param obj:  用例对象
     :param data:  调用接口的参数
     :param method:  接口的方法
-    :param key: 想要活动值的key
-    :return:
+    :param key: 想要活动值的key  可以获取多个值
+    :return:  返回获取值的列表或者字典
     '''
     log().info('>>>>>{}开始'.format(context))
+    # 调用想要获取值的接口
     res = set_request(obj, data=data, method=method, import_file=import_file)
     # print(res.text)
     try:
         assert_date = get_data_by_json(res.text, 'errorMsg')
         assert assert_date == 'ok'
+        # 判断想要获取几个值
         if type(key) is not list:
+            # 单个值时，直接去返回的数据当中找  返回一个列表
             get_data = get_data_by_json(text=res.text, key=key)
             return_data = []
+            # get_data为单个值时，将数据添加到列表当中返回
             if type(get_data) is not list:
                 return_data.append(get_data)
                 return return_data
             return get_data
+        # 多个值时，返回字典  字典返回对应值的列表
         else:
             return_dic = {}
             for k in key:
                 get_data = get_data_by_json(text=res.text, key=k)
                 if type(get_data) is not list:
+                    # 将值添加到列表当中再保存在字典当中
                     return_data = [0]
                     return_data[0] = get_data
                     return_dic[k] = return_data
@@ -293,7 +303,9 @@ def put_photo(token):
     :return:
     '''
     # 82环境的图片地址路径
-    url = 'http://10.111.32.82:10219/whale-general-service/generalservice/put'
+    # url = 'http://10.111.32.82:10219/whale-general-service/generalservice/put'
+    # 164
+    url = get_url() + 'whale-general-service/generalservice/put'
     headers = {
         'accessToken': token
     }
@@ -318,4 +330,3 @@ if __name__ == '__main__':
     sql = 'select * from {0} where {1}={2}'.format('info_case', 'id', 1251)
     count = c.execute(sql)
     print(count)
-

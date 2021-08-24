@@ -4,7 +4,6 @@
     accessToken:
   data:
     hasLicense:
-    keyword:
     maxCase:
     minCase:
     page:
@@ -51,10 +50,30 @@
   headers:
     accessToken:
   data:
-    keyword: "autoTest"
-    maxCase:
-    minCase:
+    hasLicense: 0
     page:
       page: 1
       pageSize: 90
   context: 获得无证经营商户列表接口测试结束
+
+-
+  url: "/business/list"
+  headers:
+    accessToken:
+  data:
+    riskLevel: 3
+    page:
+      page: 1
+      pageSize: 90
+  context: 根据风险等级查询接口测试结束
+
+-
+  url: "/business/list"
+  headers:
+    accessToken:
+  data:
+    keyword: "autoTest"
+    page:
+      page: 1
+      pageSize: 90
+  context: 根据关键字查询商户信息

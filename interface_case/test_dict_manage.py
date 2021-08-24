@@ -14,15 +14,26 @@ class TestDictManage:
     def setup_class(cls):
         log().info('-------------字典接口测试开始--------------')
         set_class_common(cls)
+        # 主类名称
         cls.moduleName = 'tesT' + str(uuid.uuid1())
+        # 主类编码
         cls.moduleType = 'BM' + str(uuid.uuid1())
+        # 查询关键字
         cls.keyword = None
+        # 字典主类id
         cls.id = None
+        # 字典主类id
         cls.parentId = None
+        #  子类的名称
         cls.subModuleName = 'subTest' + str(uuid.uuid1())
+        # 子类的类型
         cls.subModuleType = 'sub_BM' + str(uuid.uuid1())
+        # 子类的id
         cls.sub_id = None
+        # 主类的id列表
         cls.ids = []
+        # 子类的id列表
+        cls.sub_ids = []
 
     @classmethod
     def teardown_class(cls):
@@ -37,7 +48,7 @@ class TestDictManage:
         '''
         log().info('新增字典主类接口测试开始--')
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
         TestDictManage.keyword = self.moduleType
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/get_id_for_dict.yaml'))
@@ -49,7 +60,7 @@ class TestDictManage:
         '''
         log().info('获取字典项的id的测试开始')
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
         TestDictManage.id = get_data_by_json(res.text, 'id')
         TestDictManage.parentId = get_data_by_json(res.text, 'id')
 
@@ -62,7 +73,7 @@ class TestDictManage:
         '''
         log().info('修改字典主项的测试开始')
         res = set_request(self, data, 'post', address_id=self.id)
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/list_all.yaml'))
     def test_list_all(self, data):
@@ -73,7 +84,7 @@ class TestDictManage:
         '''
         log().info('查询所有的字典项接口测试开始')
         res = set_request(self, data, 'get')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/list.yaml'))
     def test_list(self, data):
@@ -84,6 +95,7 @@ class TestDictManage:
         '''
         log().info('根据页面查询字典接口测试开始')
         res = set_request(self, data, 'post')
+        TestDictManage.ids = get_data_by_json(res.text, key='id')[0:2]
         make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/enable_count.yaml'))
@@ -106,7 +118,7 @@ class TestDictManage:
         '''
         log().info('批量修改状态接口测试开始')
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/sub.yaml'))
     def test_sub(self, data):
@@ -117,7 +129,7 @@ class TestDictManage:
         '''
         log().info('新增字典子类接口测试开始')
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/sub_list.yaml'))
     def test_sub_list(self, data):
@@ -128,9 +140,9 @@ class TestDictManage:
         '''
         log().info('查看字典子项接口测试开始')
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
         TestDictManage.sub_id = get_data_by_json(res.text, 'id')
-        TestDictManage.ids.append(get_data_by_json(res.text, 'id'))
+        TestDictManage.sub_ids.append(get_data_by_json(res.text, 'id'))
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/sub_id.yaml'))
     def test_sub_id(self, data):
@@ -140,12 +152,9 @@ class TestDictManage:
         :return:
         '''
         log().info('修改字典子项接口测试开始')
-        url = self.host + data['url'] + str(self.sub_id)
-        headers = set_value(self, **data['headers'])
-        set_data = set_value(self, **data['data'])
-        set_data['id'] = self.sub_id
-        res = self.kw.do_post(path=url, headers=headers, json=set_data)
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        data['id'] = self.sub_id
+        res = set_request(self, data=data, method='post', address_id=self.sub_id)
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/sub_status_update_batch.yaml'))
     def test_sub_status_update_batch(self, data):
@@ -155,8 +164,9 @@ class TestDictManage:
         :return:
         '''
         log().info('批量操作字典子类状态接口测试开始')
+        data['ids'] = self.sub_ids
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/dict_manage/sub_batch_delete.yaml'))
     def test_sub_batch_delete(self, data):
@@ -168,9 +178,9 @@ class TestDictManage:
         log().info('批量删除子类接口测试开始')
         url = self.host + data['url']
         headers = set_value(self, **data['headers'])
-        set_data = set_value(self, **data['data'])
-        res = self.kw.do_post(path=url, headers=headers, json=set_data['ids'])
-        make_assert(text=res.text, assert_data='ok', keyword='errorMsg')
+        # data = self.sub_ids
+        res = InterfaceKey().do_post(path=url, headers=headers, json=self.sub_ids)
+        make_assert(text=res.text, assert_data='ok', keyword='errorMsg', context=data['context'])
 
 
 if __name__ == '__main__':
