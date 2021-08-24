@@ -42,6 +42,7 @@ class TestAlarmThresholdConfigController:
         '''
         log().info('新增告警阀值接口测试')
         if 'tree' in data['url']:
+            # 获取网格信息
             res_data = get_parameter_by_interface(self, data, 'post', ['gridName', 'gridSerial'], data['context'])
             TestAlarmThresholdConfigController.gridName = res_data['gridName'][0]
             TestAlarmThresholdConfigController.gridSerial = res_data['gridSerial'][0]

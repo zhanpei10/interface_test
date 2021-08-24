@@ -10,6 +10,7 @@ from api_keyword.interface_keyword import InterfaceKey
 import os
 from api_keyword.interface_keyword import InterfaceKey
 import requests
+import pymysql
 
 
 def get_data_by_json(text, key):
@@ -53,6 +54,25 @@ def get_url(name, key):
     conn.read(filename() + '/config/api_config.ini')
     path = conn.get(name.upper(), key)
     return path
+
+
+def get_mysql_config(name):
+    conn = configparser.ConfigParser()
+    conn.read(filename() + '/config/mysql_config.ini')
+    config_dict = {
+        'host': None,
+        'port': None,
+        'user': None,
+        'passwd': None,
+        'charset': None,
+        'database': None,
+    }
+    for key in config_dict.keys():
+        if key == 'port':
+            config_dict[key] = int(conn.get(name.upper(), key))
+        else:
+            config_dict[key] = conn.get(name.upper(), key)
+    return config_dict
 
 
 def log():
@@ -292,4 +312,10 @@ def put_photo(token):
 
 
 if __name__ == '__main__':
-    put_photo()
+    print(get_mysql_config('SIT_MYSQL'))
+    conn = pymysql.connect(**get_mysql_config('SIT_MYSQL'))
+    c = conn.cursor(cursor=pymysql.cursors.DictCursor)
+    sql = 'select * from {0} where {1}={2}'.format('info_case', 'id', 1251)
+    count = c.execute(sql)
+    print(count)
+
