@@ -2,7 +2,8 @@
 专项整治相关接口测试
 '''
 import pytest
-from common.common_method import *
+from common.get_config import *
+from common.assert_myself import *
 import random
 import time
 import os
@@ -18,8 +19,8 @@ class TestRenovationController:
         '''
         log().info('------------------专项整治相关接口测试开始----------------------')
         set_class_common(cls)
-        cls.title_draft = 'autoTest_' + str(random.randint(55, 66))
-        cls.title = 'autoTest_' + str(random.randint(66, 77))
+        cls.title_draft = 'autoTest11_' + str(random.randint(55, 66))
+        cls.title = 'autoTest11_' + str(random.randint(66, 77))
         cls.startTimestamp = int(time.time()) * 1000 + 30 * 24 * 60 * 60 * 1000
         cls.endTimestamp = int(time.time()) * 1000 + 24 * 60 * 60 * 1000
         cls.updateTimestamp = int(time.time()) * 1000 + 30 * 24 * 60 * 60 * 1000
@@ -185,7 +186,7 @@ class TestRenovationController:
         if 'users' in data['url']:
             log().info('>>>>获取人员信息')
             res = set_request(self, data=data, method='post')
-            userIndex = get_data_by_json(res.text, 'username').index('kobeAdmin009')
+            userIndex = get_data_by_json(res.text, 'username').index('dsad')
             TestRenovationController.userIds.append(get_data_by_json(text=res.text, key='userId')[userIndex])
         else:
             log().info('>>>>根据id去进行专项整治流转')

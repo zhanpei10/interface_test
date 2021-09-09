@@ -4,6 +4,7 @@
   headers:
     accessToken:
   data:
-    id: 30857
+    id:
     phase: 2
     status: 1
+  conttext: 获取案件阶段受理方式测试接口测试结束

@@ -1,7 +1,7 @@
 # 商户相关接口测试  导入商户和按id进行查询接口页面未使用
 import pytest
-from api_keyword.interface_keyword import InterfaceKey
-from common.common_method import *
+from common.assert_myself import *
+from common.get_config import *
 import random
 import time
 import uuid
@@ -180,4 +180,4 @@ class TestBusiness:
 
 
 if __name__ == '__main__':
-    pytest.main(['./test_business_controller_business.py::TestBusiness::test_create_business'])
+    pytest.main(['./test_business_controller_business.py::TestBusiness'])

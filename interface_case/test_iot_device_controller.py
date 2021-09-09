@@ -1,6 +1,7 @@
 # 噪音和扬尘设备相关接口测试
 import pytest
-from common.common_method import *
+from common.get_config import *
+from common.assert_myself import *
 import random
 import time
 

@@ -17,6 +17,7 @@
     lawIds: "3032"
     operate: "REGISTER"
     opinion: "同意受理，请予以派遣！"
+  context: 受理流程接口测试结束
 
 # 派遣操作流程
 -

@@ -1,6 +1,7 @@
 # 部门相关接口测试
 import pytest
-from common.common_method import *
+from common.get_config import *
+from common.assert_myself import *
 from api_keyword.interface_keyword import InterfaceKey
 import random
 

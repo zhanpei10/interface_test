@@ -3,6 +3,8 @@ import time
 
 import pytest
 from common.common_method import *
+from common.assert_myself import *
+from common.get_config import *
 import random
 
 

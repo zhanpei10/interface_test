@@ -1,10 +1,10 @@
 # 事件流程设置
 import pytest
-from common.common_method import *
-from api_keyword.interface_keyword import InterfaceKey
+from common.assert_myself import *
+from common.get_config import *
 import uuid
 import time
-import json
+from common.get_data_by_mysql import MysqlData
 
 
 class TestCaseManageService:
@@ -21,16 +21,21 @@ class TestCaseManageService:
         cls.serial = str(uuid.uuid1())  # 事件编号
         cls.taskNumber = str(uuid.uuid1())  # 任务号
         cls.reportTime = int(time.time()) * 1000  # 上报时间
-        cls.processClosedTime = (int(time.time()) + 24*60*60*2) * 1000  # 处理截止事件
-        cls.transferDispatchTime = (int(time.time()) + 24*60*60) * 1000  # 转派时间
+        cls.processClosedTime = int(time.time()) * 1000 + 2 * 24 * 60 * 60  # 处理截止时间
+        cls.transferDispatchTime = int(time.time()) * 1000 + 24 * 60 * 60  # 转派时间
         cls.suspectUsers = [{}]
+        cls.caseType = None
+        cls.gridSerial = None
+        cls.images = put_photo(cls.accessToken)
         # 其他参数配置
         cls.keywords = None  # 搜索关键字参数
-        cls.id = None   # 事件id
+        cls.id = None  # 事件id
         cls.deadLine = time.strftime('%Y-%m-%d %H:%M:%S')
         cls.dealTime = time.strftime('%Y-%m-%d %H:%M:%S')  # 处置时间
         cls.phase = None  # 案件阶段
         cls.caseId = None  # 案件id
+        # 流程参数配置
+        cls.userId = None  # 处置人员id
 
     @classmethod
     def teardown_class(cls):
@@ -44,10 +49,28 @@ class TestCaseManageService:
         :return:
         '''
         log().info('事件是否合并接口测试')
-        res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
-        # 为赋值keywords
-        TestCaseManageService.keywords = self.serial
+        # 调用事件流程接口，获取事件类型
+        if "process" in data['url']:
+            TestCaseManageService.caseType = \
+                get_parameter_by_interface(self, data, 'post', 'eventType', data['context'])[0]
+        # 查询已配置流程的事件和网格
+        else:
+            get_data_sql = 'SELECT gp.process_id, gp.grid_id, gr.serial ' \
+                           'FROM info_r_grid_process gp ' \
+                           'JOIN info_r_grid_process_event_type gpe ' \
+                           'ON gp.process_id = gpe.process_id ' \
+                           'JOIN info_grid gr ' \
+                           'ON gr.id = gp.grid_id WHERE gpe.event_type = {}'.format(self.caseType)
+            # 从数据库获取数据
+            mysql_data = MysqlData().get_params(get_data_sql, 1)
+            # 网格
+            TestCaseManageService.gridSerial = mysql_data[0]['serial']
+            # 调用检查接口
+            res = set_request(self, data, 'post')
+            print(res.request.body)
+            make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
+            # 为赋值keywords
+            TestCaseManageService.keywords = self.serial
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/case_manage_service/case.yaml'))
     def test_case(self, data):
@@ -58,7 +81,7 @@ class TestCaseManageService:
         '''
         log().info('事件上报接口测试开始')
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/case_manage_service/case_list.yaml'))
     def test_case_list(self, data):
@@ -69,7 +92,7 @@ class TestCaseManageService:
         '''
         log().info('查询事件列表接口测试开始')
         res = set_request(self, data, 'post')
-        make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
+        make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
         TestCaseManageService.id = get_data_by_json(res.text, 'id')
         TestCaseManageService.caseId = get_data_by_json(res.text, 'id')
 
@@ -83,9 +106,10 @@ class TestCaseManageService:
         log().info('根据事件id查询事件详情接口测试开始')
         res = set_request(self, data, 'get', address_id=self.id)
         TestCaseManageService.phase = get_data_by_json(res.text, 'phase')
-        make_assert(text=res.text, assert_data='ok', keyword='errorMsg')
+        make_assert(text=res.text, assert_data='ok', keyword='errorMsg', context=data['context'])
 
-    @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/case_manage_service/case_starred_case_id.yaml'))
+    @pytest.mark.parametrize('data',
+                             get_data_by_yaml(filename() + '/data/case_manage_service/case_starred_case_id.yaml'))
     def test_case_starred_case_id(self, data):
         '''
         根据事件id添加事件关注
@@ -96,7 +120,8 @@ class TestCaseManageService:
         res = set_request(self, data, 'put', address_id=self.caseId)
         make_assert(text=res.text, keyword='errorMsg', assert_data='ok')
 
-    @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/case_manage_service/case_unstarred_case_id.yaml'))
+    @pytest.mark.parametrize('data',
+                             get_data_by_yaml(filename() + '/data/case_manage_service/case_unstarred_case_id.yaml'))
     def test_case_un_starred_case_id(self, data):
         '''
         删除事件关注接口测试
@@ -133,7 +158,8 @@ class TestCaseManageService:
     #     print(res.request.url)
     #     make_assert(res.text, keyword='errorMsg', assert_data='ok')
 
-    @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/case_manage_service/case_timershaft_case_id.yaml'))
+    @pytest.mark.parametrize('data',
+                             get_data_by_yaml(filename() + '/data/case_manage_service/case_timershaft_case_id.yaml'))
     def test_case_timershaft_case_id(self, data):
         '''
         获取案件的时间责任轴
@@ -147,8 +173,3 @@ class TestCaseManageService:
 
 if __name__ == '__main__':
     pytest.main(['./test_case_manage_service.py::TestCaseManageService'])
-
-
-
-
-

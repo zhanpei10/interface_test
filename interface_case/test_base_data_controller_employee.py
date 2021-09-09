@@ -1,6 +1,9 @@
 # 员工增删改查接口测试
 import pytest
 from common.common_method import *
+from common.assert_myself import *
+from common.get_config import *
+
 from api_keyword.interface_keyword import InterfaceKey
 import random
 import os

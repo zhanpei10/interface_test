@@ -1,6 +1,7 @@
 # 单兵装备接口增删改差测试
 import pytest
-from common.common_method import *
+from common.get_config import *
+from common.assert_myself import *
 import random
 import time
 

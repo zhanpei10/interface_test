@@ -1,5 +1,5 @@
 -
-  url: /dict-manage/sub/batch/delete/?
+  url: /dict-manage/sub/batch/delete
   headers:
     accessToken:
   data:

@@ -1,7 +1,7 @@
 # 装备平台管理
 import pytest
-from common.common_method import *
-from api_keyword.interface_keyword import InterfaceKey
+from common.get_config import *
+from common.assert_myself import *
 import random
 import socket
 import struct

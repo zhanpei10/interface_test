@@ -1,7 +1,7 @@
 # 新增事件小类的操作
 import pytest
-from common.common_method import *
-from api_keyword.interface_keyword import InterfaceKey
+from common.get_config import *
+from common.assert_myself import *
 
 
 class TestEventCategory:

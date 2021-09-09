@@ -3,6 +3,8 @@
 # 渣土车当天轨迹 未实现接口
 import pytest
 from common.common_method import *
+from common.assert_myself import *
+from common.get_config import *
 import time
 import random
 

@@ -2,9 +2,9 @@
   字典管理操作流程，对字典主类和子类的增删改查
 '''
 import pytest
-from common.common_method import *
+from common.assert_myself import *
+from common.get_config import *
 from api_keyword.interface_keyword import InterfaceKey
-import random
 import uuid
 
 
@@ -176,10 +176,11 @@ class TestDictManage:
         :return:
         '''
         log().info('批量删除子类接口测试开始')
-        url = self.host + data['url']
+        url = self.host + "whale-openapi" + data['url']
         headers = set_value(self, **data['headers'])
-        # data = self.sub_ids
         res = InterfaceKey().do_post(path=url, headers=headers, json=self.sub_ids)
+        print(res.request.body)
+        print(res.text)
         make_assert(text=res.text, assert_data='ok', keyword='errorMsg', context=data['context'])
 
 

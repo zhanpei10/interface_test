@@ -1,6 +1,7 @@
 # 单兵装备接口增删改差测试
 import pytest
-from common.common_method import *
+from common.get_config import *
+from common.assert_myself import *
 import random
 import time
 
@@ -43,7 +44,7 @@ class TestIndividualEquipment:
             TestIndividualEquipment.equipmentName = 'autoTest_qt_' + str(random.randint(11, 17))
         res = set_request(self, data=data, method='post')
         make_assert(text=res.text, keyword='errorMsg', assert_data='ok', context=data['context'])
-        time.sleep(10)
+        time.sleep(5)
 
     @pytest.mark.parametrize('data', get_data_by_yaml(filename() + '/data/individualEquipmentController/import.yaml'))
     def test_import(self, data):
